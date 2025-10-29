@@ -3,7 +3,7 @@ import { localStorageDetector } from "typesafe-i18n/detectors";
 import TypesafeI18n from "@/i18n/i18n-react";
 import { detectLocale } from "../i18n/i18n-util";
 import { loadLocaleAsync } from "../i18n/i18n-util.async";
-import { ContextProvider } from "./types";
+import type { ContextProvider } from "@/contexts/types";
 
 const detectedLocale = detectLocale(localStorageDetector);
 

@@ -1,57 +1,92 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState } from "react";
+import { useI18nContext } from "@/i18n/i18n-react";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import { Globe } from "@/components/icons";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, toggleLanguage, t } = useLanguage();
+  const translation = useI18nContext();
+
+  const language = translation.locale;
+
+  const navBarTranslations = translation.LL.navbar;
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: t('nav.about'), href: '#about' },
-    { label: t('nav.skills'), href: '#skills' },
-    { label: t('nav.experience'), href: '#experience' },
-    { label: t('nav.certificates'), href: '#certificates' },
-    { label: t('nav.contact'), href: '#contact' },
+    { label: navBarTranslations.about(), href: "#about" },
+    { label: navBarTranslations.skills(), href: "#skills" },
+    { label: navBarTranslations.experience(), href: "#experience" },
+    { label: navBarTranslations.certificates(), href: "#certificates" },
+    { label: navBarTranslations.contact(), href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
 
+  const toggleLanguage = () => {};
+
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg shadow-primary/5' : 'bg-transparent'
+    <Box
+      component="nav"
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      zIndex={50}
+      width="100%"
+      bgcolor={isScrolled ? "background.default" : "background.transparent"}
+      //     .duration-300 {
+      //   --tw-duration: .3s;
+      //   transition-duration: .3s;
+      // }
+      className={`transition-all duration-300 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-lg shadow-primary/5"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <Container>
+        <Box
+          component="div"
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          height={64}
+        >
           {/* Logo */}
           <a
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
-              scrollToSection('#hero');
+              scrollToSection("#hero");
             }}
             className="text-primary transition-colors hover:text-accent"
           >
-            <span className="font-mono">{'<OC />'}</span>
+            <span className="font-mono">{"<OC />"}</span>
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <Box
+            component="div"
+            display={{ md: "flex", xs: "none" }}
+            alignItems="center"
+            gap={"2rem"}
+          >
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -66,17 +101,21 @@ export const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </a>
             ))}
-            
+
             <Button
-              variant="ghost"
-              size="sm"
+              variant="hover"
+              color="primary"
+              size="small"
               onClick={toggleLanguage}
-              className="gap-2"
+              style={{
+                display: "flex",
+                gap: "0.5rem",
+              }}
             >
               <Globe className="w-4 h-4" />
-              {language === 'en' ? 'HE' : 'EN'}
+              {language === "en" ? "HE" : "EN"}
             </Button>
-          </div>
+          </Box>
 
           {/* Mobile Menu Button */}
           <button
@@ -84,9 +123,9 @@ export const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {/* {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />} */}
           </button>
-        </div>
+        </Box>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
@@ -104,7 +143,7 @@ export const Navbar = () => {
                 {item.label}
               </a>
             ))}
-            <Button
+            {/* <Button
               variant="ghost"
               size="sm"
               onClick={toggleLanguage}
@@ -112,10 +151,10 @@ export const Navbar = () => {
             >
               <Globe className="w-4 h-4" />
               {language === 'en' ? 'עברית' : 'English'}
-            </Button>
+            </Button> */}
           </div>
         )}
-      </div>
-    </nav>
+      </Container>
+    </Box>
   );
-}
+};
