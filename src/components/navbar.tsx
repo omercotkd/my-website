@@ -3,7 +3,7 @@ import { useI18nContext } from "@/i18n/i18n-react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { Globe } from "@/components/icons";
+import { GlobeIcon, XIcon, MenuIcon } from "@/components/icons";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -79,8 +79,6 @@ export const Navbar = () => {
           >
             <span className="font-mono">{"<OC />"}</span>
           </a>
-
-          {/* Desktop Navigation */}
           <Box
             component="div"
             display={{ md: "flex", xs: "none" }}
@@ -101,7 +99,6 @@ export const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </a>
             ))}
-
             <Button
               variant="hover"
               color="primary"
@@ -112,7 +109,12 @@ export const Navbar = () => {
                 gap: "0.5rem",
               }}
             >
-              <Globe className="w-4 h-4" />
+              <GlobeIcon
+                style={{
+                  width: "1rem",
+                  height: "1rem",
+                }}
+              />
               {language === "en" ? "HE" : "EN"}
             </Button>
           </Box>
@@ -123,7 +125,21 @@ export const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {/* {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />} */}
+            {isMobileMenuOpen ? (
+              <XIcon
+                style={{
+                  width: "1.5rem",
+                  height: "1.5rem",
+                }}
+              />
+            ) : (
+              <MenuIcon
+                style={{
+                  width: "1.5rem",
+                  height: "1.5rem",
+                }}
+              />
+            )}
           </button>
         </Box>
 
