@@ -13,6 +13,7 @@ declare module "@mui/material/Button" {
 }
 
 export const theme = createTheme({
+  cssVariables: true,
   palette: {
     mode: "dark",
     primary: {
@@ -31,6 +32,9 @@ export const theme = createTheme({
     text: {
       primary: "rgba(250, 250, 250, 0.985)",
       secondary: "rgba(250, 250, 250, 0.708)",
+    },
+    grey: {
+      100: "#a1a1a1",
     },
     divider: "rgba(139, 92, 246, 0.2)",
   },

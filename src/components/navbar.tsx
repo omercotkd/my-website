@@ -3,6 +3,7 @@ import { useI18nContext } from "@/i18n/i18n-react";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 import { GlobeIcon, XIcon, MenuIcon } from "@/components/icons";
 
 export const Navbar = () => {
@@ -40,6 +41,54 @@ export const Navbar = () => {
 
   const toggleLanguage = () => {};
 
+  const NavStack = (
+    <>
+      {navItems.map((item, ix) => (
+        <Typography
+          component="a"
+          key={ix}
+          href={item.href}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(item.href);
+          }}
+          position={"relative"}
+          color="grey.100"
+          className="primary-hover"
+        >
+          {item.label}
+          <Typography
+            bottom={0}
+            left={0}
+            width={0}
+            height="2px"
+            component="span"
+            position="absolute"
+            className="primary-hover-child"
+          />
+        </Typography>
+      ))}
+      <Button
+        variant="hover"
+        color="primary"
+        size="small"
+        onClick={toggleLanguage}
+        style={{
+          display: "flex",
+          gap: "0.5rem",
+        }}
+      >
+        <GlobeIcon
+          style={{
+            width: "1rem",
+            height: "1rem",
+          }}
+        />
+        {language === "en" ? "HE" : "EN"}
+      </Button>
+    </>
+  );
+
   return (
     <Box
       component="nav"
@@ -69,59 +118,36 @@ export const Navbar = () => {
           height={64}
         >
           {/* Logo */}
-          <a
+          <Typography
+            component="a"
             href="#hero"
             onClick={(e) => {
               e.preventDefault();
               scrollToSection("#hero");
             }}
-            className="text-primary transition-colors hover:text-accent"
+            color="primary"
+            // TODO: change
+            fontFamily={"monospace"}
+            className="light-primary-hover"
           >
-            <span className="font-mono">{"<OC />"}</span>
-          </a>
+            {"<OC />"}
+          </Typography>
           <Box
             component="div"
             display={{ md: "flex", xs: "none" }}
             alignItems="center"
             gap={"2rem"}
           >
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className="text-muted-foreground hover:text-primary transition-colors relative group"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
-              </a>
-            ))}
-            <Button
-              variant="hover"
-              color="primary"
-              size="small"
-              onClick={toggleLanguage}
-              style={{
-                display: "flex",
-                gap: "0.5rem",
-              }}
-            >
-              <GlobeIcon
-                style={{
-                  width: "1rem",
-                  height: "1rem",
-                }}
-              />
-              {language === "en" ? "HE" : "EN"}
-            </Button>
+            {NavStack}
           </Box>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground"
+          <Button
+            variant="text"
+            sx={{
+              color: "grey.100",
+              display: { md: "none" },
+            }}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -140,35 +166,23 @@ export const Navbar = () => {
                 }}
               />
             )}
-          </button>
+          </Button>
         </Box>
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-border">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className="block text-muted-foreground hover:text-primary transition-colors"
-              >
-                {item.label}
-              </a>
-            ))}
-            {/* <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="gap-2 w-full justify-start"
-            >
-              <Globe className="w-4 h-4" />
-              {language === 'en' ? 'עברית' : 'English'}
-            </Button> */}
-          </div>
+          <Box
+            component="div"
+            display={{ md: "none", xs: "flex" }}
+            flexDirection={"column"}
+            gap={"1rem"}
+            alignItems={"flex-start"}
+            borderTop={"1px solid"}
+            borderColor={"divider"}
+            paddingTop={"1rem"}
+          >
+            {NavStack}
+          </Box>
         )}
       </Container>
     </Box>

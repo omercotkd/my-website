@@ -2282,7 +2282,7 @@
   --secondary: oklch(.269 0 0);
   --secondary-foreground: oklch(.985 0 0);
   --muted: oklch(.269 0 0);
-  --muted-foreground: oklch(.708 0 0);
+  --muted-foreground: #a1a1a1;
   --accent: #a855f7;
   --accent-foreground: oklch(.985 0 0);
   --destructive: oklch(.396 .141 25.723);
