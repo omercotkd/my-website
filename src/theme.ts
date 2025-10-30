@@ -34,11 +34,13 @@ export const theme = createTheme({
       secondary: "rgba(250, 250, 250, 0.708)",
     },
     grey: {
-      100: "#a1a1a1",
+      50: "#a1a1a1ff",
+      100: "#a1a1a1d1",
     },
     divider: "rgba(139, 92, 246, 0.2)",
   },
   typography: {
+    
     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
     h1: {
       fontSize: "3.5rem",
@@ -70,7 +72,7 @@ export const theme = createTheme({
       fontWeight: 500,
       lineHeight: 1.5,
       textTransform: "none",
-    },
+    }
   },
   shape: {
     borderRadius: 12,
@@ -96,6 +98,13 @@ export const theme = createTheme({
         },
       ],
     },
+    MuiTypography: {
+      defaultProps: {
+        style: {
+          textDecoration: "none",
+        }
+      }
+    }
     // MuiCard: {
     //   styleOverrides: {
     //     root: {
@@ -105,4 +114,5 @@ export const theme = createTheme({
     //   },
     // },
   },
+  
 });

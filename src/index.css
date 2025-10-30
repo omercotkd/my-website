@@ -29,6 +29,11 @@ body {
   transition-duration: .25s;
 }
 
+.white-shadow-hover:hover {
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
 /* Custom animations */
 @keyframes glow {
   0%, 100% {
