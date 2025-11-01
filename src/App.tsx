@@ -7,6 +7,8 @@ import { HeroSection } from "./sections/hero";
 import { AboutSection } from "./sections/about";
 import { ProgrammingLanguagesSection } from "./sections/programming-languages";
 import { ToolsSection } from "./sections/tools";
+import { DBsSection } from "./sections/dbs";
+import { CertificatesSection } from "./sections/certificates";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <AboutSection />
         <ProgrammingLanguagesSection />
         <ToolsSection />
+        <DBsSection />
+        <CertificatesSection />
       </I18nContextProvider>
     </MuiThemeProvider>
   );

@@ -5,6 +5,7 @@ import navbar from "./navbar";
 import hero from "./hero";
 import programmingLanguages from "./programming-languages";
 import tools from "./tools";
+import dbs from "./dbs";
 
 const he = {
   about,
@@ -12,6 +13,7 @@ const he = {
   hero,
   tools,
   programmingLanguages,
+  dbs,
 } satisfies Translation;
 
 export default he;

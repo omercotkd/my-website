@@ -98,6 +98,18 @@ type RootTranslation = {
 		 */
 		viewTheDocs: string
 	}
+	dbs: {
+		/**
+		 * D​a​t​a​b​a​s​e​s
+		 */
+		title: string
+		mongo: {
+			/**
+			 * D​e​s​c​r​i​p​t​i​o​n​ ​a​b​o​u​t​ ​m​y​ ​s​k​i​l​l​s​ ​i​n​ ​M​o​n​g​o​D​B
+			 */
+			description: string
+		}
+	}
 }
 
 export type TranslationFunctions = {
@@ -184,6 +196,18 @@ export type TranslationFunctions = {
 		 * View the Docs
 		 */
 		viewTheDocs: () => LocalizedString
+	}
+	dbs: {
+		/**
+		 * Databases
+		 */
+		title: () => LocalizedString
+		mongo: {
+			/**
+			 * Description about my skills in MongoDB
+			 */
+			description: () => LocalizedString
+		}
 	}
 }
 
