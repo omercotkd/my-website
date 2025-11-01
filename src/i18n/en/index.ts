@@ -6,14 +6,19 @@ import hero from "./hero";
 import programmingLanguages from "./programming-languages";
 import tools from "./tools";
 import dbs from "./dbs";
+import aboutQa from "./about-qa";
+import certificates from "./certificates";
+
 
 const en = {
   about,
   navbar,
   hero,
+  aboutQa,
   programmingLanguages,
   tools,
   dbs,
+  certificates
 } satisfies BaseTranslation;
 
 export default en;

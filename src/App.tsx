@@ -9,6 +9,10 @@ import { ProgrammingLanguagesSection } from "./sections/programming-languages";
 import { ToolsSection } from "./sections/tools";
 import { DBsSection } from "./sections/dbs";
 import { CertificatesSection } from "./sections/certificates";
+import { AboutMeQaSection } from "./sections/about-qa";
+import { ExperienceSection } from "./sections/experience";
+import { HowIstartedSection } from "./sections/how-started";
+import { Footer } from "./components/footer";
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
         <ToolsSection />
         <DBsSection />
         <CertificatesSection />
+        <AboutMeQaSection />
+        <ExperienceSection />
+        <HowIstartedSection />
+        <Footer />
       </I18nContextProvider>
     </MuiThemeProvider>
   );

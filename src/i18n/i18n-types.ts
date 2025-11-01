@@ -78,6 +78,12 @@ type RootTranslation = {
 		 */
 		myPunchline: string
 	}
+	aboutQa: {
+		/**
+		 * Q​&​A​ ​A​b​o​u​t​ ​M​e
+		 */
+		title: string
+	}
 	programmingLanguages: {
 		/**
 		 * P​r​o​g​r​a​m​m​i​n​g​ ​L​a​n​g​u​a​g​e​s
@@ -109,6 +115,12 @@ type RootTranslation = {
 			 */
 			description: string
 		}
+	}
+	certificates: {
+		/**
+		 * C​e​r​t​i​f​i​c​a​t​e​s
+		 */
+		title: string
 	}
 }
 
@@ -177,6 +189,12 @@ export type TranslationFunctions = {
 		 */
 		myPunchline: () => LocalizedString
 	}
+	aboutQa: {
+		/**
+		 * Q&A About Me
+		 */
+		title: () => LocalizedString
+	}
 	programmingLanguages: {
 		/**
 		 * Programming Languages
@@ -208,6 +226,12 @@ export type TranslationFunctions = {
 			 */
 			description: () => LocalizedString
 		}
+	}
+	certificates: {
+		/**
+		 * Certificates
+		 */
+		title: () => LocalizedString
 	}
 }
 

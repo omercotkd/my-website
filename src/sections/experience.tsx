@@ -1,44 +1,25 @@
-import { Box, Typography } from "@mui/material";
-import { AwardIcon } from "@/components/icons";
-// import { AwardIcon, CalendarIcon, GraduationCapIcon } from "@/components/icons";
+import { Box } from "@mui/material";
 import { GlowPaper } from "@/components/glow-paper";
 import { SectionTitle } from "@/components/section-title";
 
-export const CertificatesSection = () => {
+export const ExperienceSection = () => {
   const t = (key: string) => {
     return key;
   };
 
-  const certificates = [
+  const jobExperiences = [
     {
       title: "Advanced React Patterns",
-      platform: "Frontend Masters",
-      year: "2024",
-      icon: "⚛️",
-    },
-    {
-      title: "MongoDB Certified Developer",
-      platform: "MongoDB University",
-      year: "2023",
-      icon: "🍃",
-    },
-    {
-      title: "Python for Data Science",
-      platform: "Coursera",
-      year: "2023",
-      icon: "🐍",
-    },
-    {
-      title: "AWS Solutions Architect",
-      platform: "Amazon Web Services",
-      year: "2022",
-      icon: "☁️",
+      startYear: "2022",
+      endYear: "2024",
+      icon: <div></div>,
+      mainSkills: ["React", "TypeScript", "Frontend Architecture"],
     },
   ];
 
   return (
     <Box
-      id="certificates"
+      id="experience"
       component="section"
       position="relative"
       py={12}
@@ -46,7 +27,7 @@ export const CertificatesSection = () => {
       gap={6}
       flexDirection="column"
     >
-      <SectionTitle title={t("certificates.title")} />
+      <SectionTitle title={t("jobExperiences.title")} />
 
       {/* Timeline */}
       <Box sx={{ position: "relative" }}>
@@ -73,7 +54,7 @@ export const CertificatesSection = () => {
             mx: "auto",
           }}
         >
-          {certificates.map((cert, index) => (
+          {jobExperiences.map((job, index) => (
             <Box
               key={index}
               sx={{
@@ -116,40 +97,13 @@ export const CertificatesSection = () => {
                 }}
               >
                 <GlowPaper>
-                  <div>{cert.title}</div>
+                  <div>{job.title}</div>
                 </GlowPaper>
               </Box>
               {/* Spacer */}
               <Box sx={{ flex: 1, display: { xs: "none", md: "block" } }} />
             </Box>
           ))}
-
-          {/* Coming Soon Card */}
-          <Box
-            sx={{
-              position: "relative",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              zIndex: 15,
-            }}
-          >
-            <GlowPaper border="2px dashed">
-              <Box
-                sx={{
-                  p: 3,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: 1.5,
-                  color: "text.secondary",
-                }}
-              >
-                <AwardIcon sx={{ color: "secondary.main", fontSize: 20 }} />
-                <Typography>{t("certificates.comingSoon")}</Typography>
-              </Box>
-            </GlowPaper>
-          </Box>
         </Box>
       </Box>
     </Box>

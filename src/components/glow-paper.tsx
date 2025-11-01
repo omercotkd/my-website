@@ -3,20 +3,22 @@ import Paper from "@mui/material/Paper";
 interface GlowPaperProps {
   children: React.ReactNode;
   rotationDirection?: "clockwise" | "counterclockwise";
+  border?: string;
 }
 
 // A Paper component that adds a glowing effect on hover
-export const GlowPaper = ({ children, rotationDirection }: GlowPaperProps) => {
+export const GlowPaper = ({ children, rotationDirection, border }: GlowPaperProps) => {
   const hoverTransform =
     rotationDirection === "counterclockwise"
       ? "scale(1.1) rotate(-6deg)"
       : "scale(1.1) rotate(6deg)";
 
+
   return (
     <Paper
       component="div"
       sx={{
-        border: "1px solid",
+        border: border || "1px solid",
         borderColor: "divider",
         transition: "all 0.3s",
         "&:hover": {
