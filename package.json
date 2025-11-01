@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://omercotkd.github.io/my-website/",
   "scripts": {
     "dev": "npm-run-all --parallel start-dev typesafe-i18n",
     "start-dev": "vite --host",
