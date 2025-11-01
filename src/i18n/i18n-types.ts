@@ -18,7 +18,29 @@ type RootTranslation = {
 		/**
 		 * A​b​o​u​t​ ​M​e
 		 */
-		aboutMe: string
+		title: string
+		/**
+		 * S​o​m​e​t​h​i​n​g​ ​s​h​o​r​t​ ​a​b​o​u​t​ ​m​e​ ​t​o​ ​i​n​t​r​o​d​u​c​e​ ​m​y​s​e​l​f​ ​t​o​ ​s​i​t​e​ ​v​i​s​i​t​o​r​s​.
+		 */
+		bio: string
+		hobbies: {
+			/**
+			 * T​r​a​v​e​l​i​n​g
+			 */
+			traveling: string
+			/**
+			 * G​y​m
+			 */
+			gym: string
+			/**
+			 * B​a​k​i​n​g​ ​&​ ​C​o​o​k​i​n​g
+			 */
+			bakingAndCooking: string
+			/**
+			 * T​e​c​h​n​o​l​o​g​y
+			 */
+			technology: string
+		}
 	}
 	navbar: {
 		/**
@@ -42,6 +64,40 @@ type RootTranslation = {
 		 */
 		contact: string
 	}
+	hero: {
+		/**
+		 * O​m​e​r​ ​C​o​h​e​n
+		 */
+		myName: string
+		/**
+		 * F​u​l​l​-​S​t​a​c​k​ ​D​e​v​e​l​o​p​e​r
+		 */
+		myProfession: string
+		/**
+		 * S​o​m​e​t​h​i​n​g​ ​t​h​a​t​ ​d​e​s​c​r​i​b​e​s​ ​m​y​ ​w​o​r​k​ ​e​t​h​i​c​ ​o​r​ ​p​e​r​s​o​n​a​l​i​t​y​.
+		 */
+		myPunchline: string
+	}
+	programmingLanguages: {
+		/**
+		 * P​r​o​g​r​a​m​m​i​n​g​ ​L​a​n​g​u​a​g​e​s
+		 */
+		title: string
+		/**
+		 * P​r​o​f​i​c​i​e​n​c​y
+		 */
+		proficiency: string
+	}
+	tools: {
+		/**
+		 * F​r​a​m​e​w​o​r​k​s​ ​&​ ​T​o​o​l​s
+		 */
+		title: string
+		/**
+		 * V​i​e​w​ ​t​h​e​ ​D​o​c​s
+		 */
+		viewTheDocs: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -49,7 +105,29 @@ export type TranslationFunctions = {
 		/**
 		 * About Me
 		 */
-		aboutMe: () => LocalizedString
+		title: () => LocalizedString
+		/**
+		 * Something short about me to introduce myself to site visitors.
+		 */
+		bio: () => LocalizedString
+		hobbies: {
+			/**
+			 * Traveling
+			 */
+			traveling: () => LocalizedString
+			/**
+			 * Gym
+			 */
+			gym: () => LocalizedString
+			/**
+			 * Baking & Cooking
+			 */
+			bakingAndCooking: () => LocalizedString
+			/**
+			 * Technology
+			 */
+			technology: () => LocalizedString
+		}
 	}
 	navbar: {
 		/**
@@ -72,6 +150,40 @@ export type TranslationFunctions = {
 		 * Contact
 		 */
 		contact: () => LocalizedString
+	}
+	hero: {
+		/**
+		 * Omer Cohen
+		 */
+		myName: () => LocalizedString
+		/**
+		 * Full-Stack Developer
+		 */
+		myProfession: () => LocalizedString
+		/**
+		 * Something that describes my work ethic or personality.
+		 */
+		myPunchline: () => LocalizedString
+	}
+	programmingLanguages: {
+		/**
+		 * Programming Languages
+		 */
+		title: () => LocalizedString
+		/**
+		 * Proficiency
+		 */
+		proficiency: () => LocalizedString
+	}
+	tools: {
+		/**
+		 * Frameworks & Tools
+		 */
+		title: () => LocalizedString
+		/**
+		 * View the Docs
+		 */
+		viewTheDocs: () => LocalizedString
 	}
 }
 

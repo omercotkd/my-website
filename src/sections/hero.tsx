@@ -7,13 +7,10 @@ import {
   LinkedInButton,
 } from "@/components/buttons/contact";
 import { ProfilePicture } from "@/components/profile-picture";
+import { useI18nContext } from "@/i18n/i18n-react";
 
 export const HeroSection = () => {
-  // const { t } = useLanguage();
-
-  const t = (_: string) => {
-    return "Placeholder Text";
-  };
+  const heroTranslation = useI18nContext().LL.hero;
 
   return (
     <Box
@@ -28,7 +25,7 @@ export const HeroSection = () => {
       width={"100%"}
     >
       {/* Animated Background */}
-      <>
+      <Box component="div" zIndex={-1}>
         <Box
           component="div"
           sx={{
@@ -63,7 +60,7 @@ export const HeroSection = () => {
               "linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.05), transparent)",
           }}
         />
-      </>
+      </Box>
       {/* Content */}
       <Box
         component="div"
@@ -84,10 +81,10 @@ export const HeroSection = () => {
         >
           {/* TODO: make the color change from dark to light (gradient) */}
           <Typography variant="h1" color="primary">
-            {t("hero.name")}
+            {heroTranslation.myName()}
           </Typography>
           <Typography variant="h3" color="grey.100" fontWeight={400}>
-            {t("hero.title")}
+            {heroTranslation.myProfession()}
           </Typography>
           <Typography
             variant="body1"
@@ -95,7 +92,7 @@ export const HeroSection = () => {
             fontWeight={400}
             fontStyle={"italic"}
           >
-            "{t("hero.tagline")}"
+            "{heroTranslation.myPunchline()}"
           </Typography>
         </Box>
         {/* Social Buttons */}
