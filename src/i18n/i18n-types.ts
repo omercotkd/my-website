@@ -100,7 +100,7 @@ type RootTranslation = {
 		 */
 		title: string
 		/**
-		 * V​i​e​w​ ​t​h​e​ ​D​o​c​s
+		 * V​i​e​w​ ​D​o​c​s
 		 */
 		viewTheDocs: string
 	}
@@ -211,7 +211,7 @@ export type TranslationFunctions = {
 		 */
 		title: () => LocalizedString
 		/**
-		 * View the Docs
+		 * View Docs
 		 */
 		viewTheDocs: () => LocalizedString
 	}

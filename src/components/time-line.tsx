@@ -36,20 +36,20 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
             sx={{
               position: "relative",
               display: "flex",
-              left: { xs: "5%", md: "0" },
+              left: 0,
               alignItems: { xs: "flex-start", md: "center" },
               gap: 4,
               flexDirection: {
                 xs: "column",
                 md: index % 2 === 0 ? "row" : "row-reverse",
-              },
+              }
             }}
           >
             {/* Timeline dot */}
             <Box
               sx={{
                 position: "absolute",
-                left: { xs: "0", md: "50%" },
+                left: { xs: "5%", md: "50%" },
                 transform: "translateX(-50%)",
                 width: 10,
                 height: 10,
@@ -63,7 +63,7 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
             />
             {/* Item */}
             <Box
-              paddingLeft={{ xs: "5%", md: 0 }}
+              paddingLeft={{ xs: "8%", md: 0 }}
               sx={{
                 flex: 1,
                 textAlign: {
@@ -85,7 +85,7 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
               display: "flex",
               alignItems: "center",
               justifyContent: { xs: "flex-start", md: "center" },
-              left: { xs: "2%", md: "0" },
+              paddingLeft: { xs: "2%", md: 0 },
               position: "relative",
               zIndex: 15,
             }}

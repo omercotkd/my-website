@@ -1,4 +1,4 @@
 export default {
     title: "Frameworks & Tools",
-    viewTheDocs: "View the Docs",
+    viewTheDocs: "View Docs",
 }

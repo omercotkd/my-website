@@ -31,6 +31,14 @@ export const GlowPaper = ({ children, border }: GlowPaperProps) => {
             transform: "scale(1.1)",
             transition: "transform 0.3s",
           },
+          "& .hover-primary": {
+            color: "primary.main",
+            transition: "color 0.3s",
+          },
+          "& .hover-display-block": {
+            display: "block",
+            transition: "display 0.3s",
+          },
         },
       }}
     >
