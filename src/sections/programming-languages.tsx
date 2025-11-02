@@ -1,9 +1,10 @@
 import Grid from "@mui/material/Grid";
-// import Typography from "@mui/material/Typography";
+import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { SectionTitle } from "@/components/section-title";
 import { GlowPaper } from "@/components/glow-paper";
 import { useI18nContext } from "@/i18n/i18n-react";
+import { ProgressBar } from "@/components/progress-bar";
 
 export const ProgrammingLanguagesSection = () => {
   const plTranslation = useI18nContext().LL.programmingLanguages;
@@ -22,18 +23,23 @@ export const ProgrammingLanguagesSection = () => {
     {
       name: "TypeScript",
       proficiency: 5,
-      color: "#3178C6",
+      color: "#096192",
     },
     {
       name: "HTML/CSS",
-      proficiency: 5,
-      color: "#E34F26",
+      proficiency: 4.5,
+      color: "#fe9a00",
     },
     {
       name: "Rust",
       proficiency: 3,
       color: "#D34516",
     },
+    {
+      name: "C",
+      proficiency: 2,
+      color: "#555555",
+    }
   ];
 
   return (
@@ -49,9 +55,7 @@ export const ProgrammingLanguagesSection = () => {
       flexDirection="column"
     >
       <SectionTitle title={plTranslation.title()} />
-
-      {/* Hobbies */}
-      <Grid container spacing={3} width="90%">
+      <Grid container spacing={3} width="80%">
         {languages.map((lang, index) => (
           <Grid
             key={index}
@@ -62,7 +66,30 @@ export const ProgrammingLanguagesSection = () => {
             }}
           >
             <GlowPaper>
-              <>{lang.name}</>
+              <Box padding={2} display="flex" flexDirection="column" gap={2}>
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
+                  <Typography
+                    variant="body1"
+                    color={lang.color}
+                    className="hover-scale"
+                  >
+                    {lang.name}
+                  </Typography>
+                  <ProgressBar
+                    style="stars"
+                    progress={lang.proficiency * 20}
+                    className="hover-scale"
+                  />
+                </Box>
+                <ProgressBar style="line" progress={lang.proficiency * 20} />
+                <Typography variant="body2" color="text.secondary">
+                  {plTranslation.proficiency()}: {lang.proficiency}/5
+                </Typography>
+              </Box>
             </GlowPaper>
           </Grid>
         ))}

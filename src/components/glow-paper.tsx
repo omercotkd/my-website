@@ -2,17 +2,11 @@ import Paper from "@mui/material/Paper";
 
 interface GlowPaperProps {
   children: React.ReactNode;
-  rotationDirection?: "clockwise" | "counterclockwise";
   border?: string;
 }
 
 // A Paper component that adds a glowing effect on hover
-export const GlowPaper = ({ children, rotationDirection, border }: GlowPaperProps) => {
-  const hoverTransform =
-    rotationDirection === "counterclockwise"
-      ? "scale(1.1) rotate(-6deg)"
-      : "scale(1.1) rotate(6deg)";
-
+export const GlowPaper = ({ children, border }: GlowPaperProps) => {
 
   return (
     <Paper
@@ -25,9 +19,16 @@ export const GlowPaper = ({ children, rotationDirection, border }: GlowPaperProp
           // TODO change to use theme variables
           borderColor: "rgba(139, 92, 246, 0.5)",
           boxShadow: "0 10px 30px rgba(139, 92, 246, 0.1)",
-          // every child and nested child with class hover-rotate
           "& .hover-rotate": {
-            transform: hoverTransform,
+            transform: "scale(1.1) rotate(6deg)",
+            transition: "transform 0.3s",
+          },
+          "& .hover-rotate-counter": {
+            transform: "scale(1.1) rotate(-6deg)",
+            transition: "transform 0.3s",
+          },
+          "& .hover-scale": {
+            transform: "scale(1.1)",
             transition: "transform 0.3s",
           },
         },

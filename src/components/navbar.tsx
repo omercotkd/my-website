@@ -125,6 +125,7 @@ export const Navbar = () => {
               e.preventDefault();
               scrollToSection("#hero");
             }}
+            variant="h5"
             color="primary"
             // TODO: change
             fontFamily={"monospace"}
