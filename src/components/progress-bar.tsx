@@ -54,7 +54,7 @@ const StarsProgressBar = ({
   className?: string;
 }) => {
   const fontSize = 16;
-
+    
   return (
     <Box sx={{ display: "flex", gap: 0.5 }}>
       {[...Array(5)].map((_, i) => {

@@ -34,7 +34,7 @@ export const theme = createTheme({
       50: "#a1a1a1ff",
       100: "#a1a1a1d1",
     },
-    divider: "rgba(139, 92, 246, 0.2)",
+    divider: "hsla(258, 90%, 66%, 0.20)",
   },
   typography: {
     fontFamily: "Inter, system-ui, -apple-system, sans-serif",

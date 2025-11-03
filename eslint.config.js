@@ -7,7 +7,7 @@ import { defineConfig, globalIgnores } from 'eslint/config'
 import reactX from "eslint-plugin-react-x";
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'i18n-util.ts']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -21,6 +21,9 @@ export default defineConfig([
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        projectService: true,
+      },
     },
   },
 ])

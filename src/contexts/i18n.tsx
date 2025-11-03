@@ -13,7 +13,7 @@ export const I18nContextProvider: ContextProvider = ({ children }) => {
   const langDir = detectedLocale === "he" ? "rtl" : "ltr";
 
   useLayoutEffect(() => {
-    loadLocaleAsync(detectedLocale).then(() => setWasLoaded(true));
+    loadLocaleAsync(detectedLocale).then(() => { setWasLoaded(true); });
   }, []);
 
   if (!wasLoaded) return null;

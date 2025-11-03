@@ -31,9 +31,10 @@ export const AboutMeQaSection = () => {
 
       {/* Hobbies */}
       <Grid container spacing={3} width="90%">
-        {questionAnswers.map((qa, index) => (
+        {questionAnswers.map((qa, ix) => (
           <Grid
-            key={index}
+            // static list we can use index as key
+            key={ix} // eslint-disable-line react/no-array-index-key
             size={{
               xs: 12,
               sm: 6,

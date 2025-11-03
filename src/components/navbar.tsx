@@ -20,7 +20,7 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => { window.removeEventListener("scroll", handleScroll); };
   }, []);
 
   const navItems = [
@@ -39,14 +39,17 @@ export const Navbar = () => {
     }
   };
 
-  const toggleLanguage = () => {};
+  const toggleLanguage = () => {
+    console.log("Toggling language");
+  };
 
   const NavStack = (
     <>
       {navItems.map((item, ix) => (
         <Typography
           component="a"
-          key={ix}
+          // static list we can use index as key
+          key={ix} // eslint-disable-line react/no-array-index-key
           href={item.href}
           onClick={(e) => {
             e.preventDefault();
@@ -54,7 +57,6 @@ export const Navbar = () => {
           }}
           position={"relative"}
           color="grey.100"
-          className="primary-hover"
         >
           {item.label}
           <Typography
@@ -64,7 +66,6 @@ export const Navbar = () => {
             height="2px"
             component="span"
             position="absolute"
-            className="primary-hover-child"
           />
         </Typography>
       ))}
@@ -149,7 +150,7 @@ export const Navbar = () => {
               color: "grey.100",
               display: { md: "none" },
             }}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (

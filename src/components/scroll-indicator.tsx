@@ -13,7 +13,7 @@ export const ScrollIndicator = () => {
     
     onScroll();
 
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); };
   }, []);
 
   if (!visible) return null;

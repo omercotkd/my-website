@@ -12,13 +12,14 @@ export const GlowPaper = ({ children, border }: GlowPaperProps) => {
     <Paper
       component="div"
       sx={{
-        border: border || "1px solid",
+        border: border ?? "1px solid",
         borderColor: "divider",
         transition: "all 0.3s",
         "&:hover": {
           // TODO change to use theme variables
           borderColor: "rgba(139, 92, 246, 0.5)",
           boxShadow: "0 10px 30px rgba(139, 92, 246, 0.1)",
+          transition: "box-shadow 0.3s ease",
           "& .hover-rotate": {
             transform: "scale(1.1) rotate(6deg)",
             transition: "transform 0.3s",
