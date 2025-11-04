@@ -110,7 +110,7 @@ export const ToolsSection = () => {
                   height={80}
                   sx={{
                     background:
-                      "linear-gradient(to bottom right, rgba(139, 92, 246, 0.2), transparent)",
+                      "linear-gradient(to bottom right, var(--mui-palette-glow-100), transparent)",
                     borderBottomLeftRadius: "100%",
                     transition: "opacity 0.3s",
                   }}
@@ -118,19 +118,22 @@ export const ToolsSection = () => {
                 <Typography variant="h2" className="hover-rotate">
                   {tool.emoji}
                 </Typography>
-                <Typography variant="h5" className="hover-primary">
+                <Typography variant="h6" className="hover-primary">
                   {tool.name}
                 </Typography>
                 <Typography
-                  variant="body2"
+                  variant="subtitle2"
                   component="a"
                   href={tool.docUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover-primary"
+                  display="flex"
+                  alignItems="center"
+                  gap={0.5}
                 >
-                  {toolsTranslation.viewTheDocs()}{" "}
                   <ExternalLinkIcon sx={{ fontSize: 12 }} />
+                  {toolsTranslation.viewTheDocs()}
                 </Typography>
               </Box>
             </GlowPaper>

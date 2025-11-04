@@ -34,7 +34,7 @@ export const HeroSection = () => {
             height: "384px",
             top: "-172px",
             left: "-172px",
-            background: "rgba(139, 92, 246, 0.2)",
+            background: "glow.100",
             borderRadius: "50%",
             filter: "blur(80px)",
           }}
@@ -47,7 +47,7 @@ export const HeroSection = () => {
             height: "384px",
             bottom: "-172px",
             right: "-172px",
-            background: "rgba(168, 85, 247, 0.2)",
+            background: "glow.400",
             borderRadius: "50%",
             filter: "blur(80px)",
           }}
@@ -57,7 +57,7 @@ export const HeroSection = () => {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.05), transparent)",
+              "linear-gradient(to bottom, transparent, var(--mui-palette-glow-200), transparent)",
           }}
         />
       </Box>
@@ -83,13 +83,11 @@ export const HeroSection = () => {
           <Typography variant="h1" color="primary">
             {heroTranslation.myName()}
           </Typography>
-          <Typography variant="h3" color="grey.100" fontWeight={400}>
+          <Typography variant="h3">
             {heroTranslation.myProfession()}
           </Typography>
           <Typography
             variant="body1"
-            color="grey.50"
-            fontWeight={400}
             fontStyle={"italic"}
           >
             "{heroTranslation.myPunchline()}"

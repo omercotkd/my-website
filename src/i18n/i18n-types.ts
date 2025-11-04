@@ -121,6 +121,10 @@ type RootTranslation = {
 		 * C​e​r​t​i​f​i​c​a​t​e​s
 		 */
 		title: string
+		/**
+		 * M​o​r​e​ ​c​o​m​i​n​g​ ​S​o​o​n​.​.​.
+		 */
+		moreComingSoon: string
 	}
 }
 
@@ -232,6 +236,10 @@ export type TranslationFunctions = {
 		 * Certificates
 		 */
 		title: () => LocalizedString
+		/**
+		 * More coming Soon...
+		 */
+		moreComingSoon: () => LocalizedString
 	}
 }
 

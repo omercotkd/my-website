@@ -16,7 +16,7 @@ export const SectionTitle = ({ title }: { title: string }) => {
       <Typography
         variant="h2"
         sx={{
-          fontSize: { xs: "2.5rem", md: "3rem" },
+          fontSize: { xs: "36px", md: "48px" },
           background: lineGradient,
           backgroundClip: "text",
           WebkitBackgroundClip: "text",

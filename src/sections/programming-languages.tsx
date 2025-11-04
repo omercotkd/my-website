@@ -87,7 +87,7 @@ export const ProgrammingLanguagesSection = () => {
                   />
                 </Box>
                 <ProgressBar style="line" progress={lang.proficiency * 20} />
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="subtitle2">
                   {plTranslation.proficiency()}: {lang.proficiency}/5
                 </Typography>
               </Box>

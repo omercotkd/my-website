@@ -3,21 +3,23 @@ import Paper from "@mui/material/Paper";
 interface GlowPaperProps {
   children: React.ReactNode;
   border?: string;
+  hoverBorderColor?: string;
 }
 
 // A Paper component that adds a glowing effect on hover
-export const GlowPaper = ({ children, border }: GlowPaperProps) => {
+export const GlowPaper = ({ children, border, hoverBorderColor }: GlowPaperProps) => {
 
   return (
     <Paper
       component="div"
+      className="animate-glow-hover"
       sx={{
         border: border ?? "1px solid",
-        borderColor: "divider",
+        borderColor: "var(--mui-palette-glow-100)",
         transition: "all 0.3s",
         "&:hover": {
-          borderColor: "border.main",
-          boxShadow: "0 10px 30px var(--mui-palette-border-dark)",
+          borderColor: hoverBorderColor ?? "glow.50",
+          boxShadow: "0 10px 30px var(--mui-palette-glow-100)",
           transition: "box-shadow 0.3s ease",
           "& .hover-rotate": {
             transform: "scale(1.1) rotate(6deg)",

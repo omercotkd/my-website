@@ -34,24 +34,24 @@ export const ScrollIndicator = () => {
     >
       <Box
         component="div"
-        width="24px"
+        width="22px"
         height="40px"
-        border="1px solid"
-        borderColor="border.main"
-        borderRadius="40%"
+        border="2px solid"
+        borderColor="glow.50"
+        borderRadius="3.40282e38px"
         display="flex"
         justifyContent="center"
-        alignItems="center"
       >
         <Box
           component="div"
-          width="6px"
-          height="12px"
+          width="4px"
+          height="14px"
+          marginTop="10px"
           sx={{
             backgroundColor: "primary.main",
           }}
           className="animate-float"
-          borderRadius="50%"
+          borderRadius="35%"
         />
       </Box>
     </Box>

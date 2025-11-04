@@ -55,7 +55,8 @@ export const Navbar = () => {
             scrollToSection(item.href);
           }}
           position={"relative"}
-          color="grey.100"
+          color="text.muted"
+          fontSize="16px"
         >
           {item.label}
           <Typography
@@ -125,9 +126,8 @@ export const Navbar = () => {
               e.preventDefault();
               scrollToSection("#hero");
             }}
-            variant="h5"
+            fontSize="16px"
             color="primary"
-            // TODO: change
             fontFamily={"monospace"}
             className="light-primary-hover"
           >

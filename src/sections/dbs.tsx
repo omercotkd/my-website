@@ -55,46 +55,77 @@ export const DBsSection = () => {
     >
       <SectionTitle title={dbsTranslation.title()} />
       {/* Big Databases */}
-      <Box width="80%">
+      <Box width="fit-content" maxWidth="90%">
         {dbsBig.map((db) => (
-          <GlowPaper key={db.name}>
+          <GlowPaper
+            key={db.name}
+            border="2px solid"
+            hoverBorderColor="primary.main"
+          >
             <Box
-              p={3}
+              p={2}
               display="flex"
               flexDirection={{ xs: "column", md: "row" }}
               alignItems="center"
-              gap={1}
+              gap={2}
+              position={"relative"}
             >
+              {/* background */}
+              <Box
+                component="div"
+                position="absolute"
+                sx={{
+                  inset: 0,
+                  background:
+                    "linear-gradient(to bottom right, var(--mui-palette-glow-100), transparent, var(--mui-palette-glow-300))",
+                }}
+              />
               <Box className="hover-scale">{db.icon}</Box>
-              <Box>
-                <Typography variant="h4" color="primary.main" fontWeight={300}>
+              <Box
+                component="div"
+                display="flex"
+                flexDirection="column"
+                alignItems={{ xs: "center", md: "flex-start" }}
+                textAlign={{ xs: "center", md: "left" }}
+                gap={1}
+              >
+                <Typography variant="h4" color="primary.main">
                   {db.name}
                 </Typography>
-                <Typography variant="body1">{db.description}</Typography>
+                <Typography variant="body2">{db.description}</Typography>
                 <Box
                   mt={2}
                   display="flex"
                   flexWrap="wrap"
-                  justifyContent="center"
+                  justifyContent={{ xs: "center", md: "flex-start" }}
                   gap={1}
                 >
                   {db.skills.map((skill) => (
-                    <Box
+                    <Typography
                       // each skill is unique we can use it as key
                       key={skill}
                       px={2}
                       py={0.5}
                       borderRadius={16}
-                      bgcolor="primary.main"
-                      color="background.paper"
-                      fontSize="0.875rem"
+                      bgcolor="glow.200"
+                      color="primary.main"
+                      border="1px solid"
+                      borderColor="primary.dark"
+                      fontSize="0.75rem"
                     >
                       {skill}
-                    </Box>
+                    </Typography>
                   ))}
                 </Box>
               </Box>
-              <GenericDatabaseIcon className="hover-primary" />
+              <GenericDatabaseIcon
+                className="hover-primary"
+                sx={{
+                  color: "glow.50",
+                  width: "48px",
+                  height: "48px",
+                }}
+              />
             </Box>
           </GlowPaper>
         ))}
@@ -125,7 +156,7 @@ export const DBsSection = () => {
                 alignItems="center"
               >
                 <Box className="hover-scale">{db.icon}</Box>
-                <Typography variant="h5" className="hover-primary">
+                <Typography variant="h6" className="hover-primary">
                   {db.name}
                 </Typography>
               </Box>

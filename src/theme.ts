@@ -1,10 +1,14 @@
-import { createTheme, type PaletteColorOptions } from "@mui/material/styles";
+import { createTheme, type Color } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface TypeBackground {
     transparent: string;
   }
   interface PaletteOptions {
-    border: PaletteColorOptions;
+    glow: Partial<Color>;
+  }
+
+  interface TypeText {
+    muted: string;
   }
 }
 
@@ -25,57 +29,79 @@ export const theme = createTheme({
     },
     background: {
       default: "#0D0D0D",
-      paper: "#1A1A1A",
+      paper: "#1A1A1A00",
       transparent: "#0000",
     },
     text: {
-      primary: "rgba(250, 250, 250, 0.985)",
-      secondary: "rgba(250, 250, 250, 0.708)",
+      primary: "#fafafafb",
+      secondary: "rgba(161, 161, 161, 0.8)",
+      muted: "#a1a1a1",
     },
     grey: {
       50: "#a1a1a1ff",
       100: "#a1a1a1d1",
     },
-    border: {
-      main: "#8b5cf680",
-      dark: "#8b5cf61a"
+    glow: {
+      50: "rgba(139, 92, 246, 0.5)",
+      100: "rgba(139, 92, 246, 0.2)",
+      200: "rgba(139, 92, 246, 0.1)",
+      300: "rgba(168, 85, 247, 0.1)",
+      400: "rgba(168, 85, 247, 0.2)",
     },
-    divider: "rgba(137, 90, 246, 0.2)",
+    divider: "#895af633",
   },
   typography: {
-    fontFamily: "Inter, system-ui, -apple-system, sans-serif",
+    fontFamily: "ui-sans-serif, system-ui, sans-serif",
     h1: {
-      fontSize: "3.5rem",
-      fontWeight: 500,
+      fontSize: "72px",
+      fontWeight: 400,
       lineHeight: 1.5,
     },
     h2: {
-      fontSize: "2.5rem",
-      fontWeight: 500,
+      fontSize: "48px",
+      fontWeight: 400,
       lineHeight: 1.5,
     },
     h3: {
-      fontSize: "1.875rem",
+      fontSize: "24px",
       fontWeight: 500,
       lineHeight: 1.5,
+      color: "var(--mui-palette-text-muted)"
     },
     h4: {
-      fontSize: "1.25rem",
-      fontWeight: 500,
+      fontSize: "24px",
+      fontWeight: 400,
       lineHeight: 1.5,
     },
     h5: {
-      fontSize: "1rem",
+      fontSize: "18px",
+      fontWeight: 400,
+      lineHeight: 1.5,
+    },
+    h6: {
+      fontSize: "16px",
       fontWeight: 500,
       lineHeight: 1.5,
     },
     body1: {
-      fontSize: "14px",
+      fontSize: "18px",
       fontWeight: 400,
       lineHeight: 1.5,
+      color: "var(--mui-palette-text-secondary)"
     },
     body2: {
-      fontSize: "11px",
+      fontSize: "16px",
+      fontWeight: 120,
+      lineHeight: 1.5,
+      color: "var(--mui-palette-text-secondary)",
+    },
+    subtitle1: {
+      fontSize: "14px",
+      color: "var(--mui-palette-text-muted)",
+    },
+    subtitle2: {
+      fontSize: "12px",
+      color: "var(--mui-palette-text-muted)",
     },
     button: {
       fontSize: "1rem",

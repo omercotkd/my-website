@@ -104,7 +104,7 @@ export const AboutSection = () => {
                   }}
                   className="hover-rotate"
                 />
-                <Typography variant="body1" sx={{ color: "text.secondary" }}>
+                <Typography variant="subtitle1">
                   {hobby.label}
                 </Typography>
               </Box>
