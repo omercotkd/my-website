@@ -7,92 +7,104 @@ interface TimeLineProps {
 
 export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
   return (
-    <Box sx={{ position: "relative" }}>
-      {/* Vertical line */}
-      <Box
-        position="absolute"
-        left={{ xs: "5%", md: "50%" }}
-        top={0}
-        bottom={0}
-        width="2px"
-        display="block"
-        sx={{
-          background:
-            "linear-gradient(to bottom, var(--mui-palette-primary-main), var(--mui-palette-primary-light), var(--mui-palette-primary-main))",
-        }}
-      />
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 4,
-          width: "100%",
-          mx: "auto",
-        }}
-      >
-        {timeLineItems.map((item, ix) => (
-          <Box
-            key={ix} // eslint-disable-line react-x/no-array-index-key
-            sx={{
-              position: "relative",
-              display: "flex",
-              left: 0,
-              alignItems: { xs: "flex-start", md: "center" },
-              gap: 4,
-              flexDirection: {
-                xs: "column",
-                md: ix % 2 === 0 ? "row" : "row-reverse",
-              }
-            }}
-          >
-            {/* Timeline dot */}
+    <Box
+      component="div"
+      display="flex"
+      justifyContent={{ md: "center" }}
+      marginX={{
+        xs: "5%",
+      }}
+    >
+      <Box component="div" position="relative">
+        {/* Vertical line */}
+        <Box
+          position="absolute"
+          left={{ xs: "5%", md: "50%" }}
+          top={0}
+          bottom={0}
+          width="2px"
+          display="block"
+          sx={{
+            background:
+              "linear-gradient(to bottom, var(--mui-palette-primary-main), var(--mui-palette-primary-light), var(--mui-palette-primary-main))",
+            transform: "translateX(-50%)",
+          }}
+        />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+          }}
+        >
+          {timeLineItems.map((item, ix) => (
             <Box
+              key={ix} // eslint-disable-line react-x/no-array-index-key
               sx={{
-                position: "absolute",
-                left: { xs: "5%", md: "50%" },
-                transform: "translateX(-50%)",
-                width: 10,
-                height: 10,
-                borderRadius: "50%",
-                backgroundColor: "primary.main",
-                border: "4px solid",
-                borderColor: "background.default",
-                display: "block",
-                zIndex: 10,
-              }}
-            />
-            {/* Item */}
-            <Box
-              paddingLeft={{ xs: "8%", md: 0 }}
-              sx={{
-                flex: 1,
-                textAlign: {
-                  xs: "left",
-                  md: ix % 2 === 0 ? "right" : "left",
+                position: "relative",
+                display: "flex",
+                left: { md: "50%"},
+                transform: { md: "translateX(-50%)" },
+                alignItems: "center",
+                gap: 4,
+                flexDirection: {
+                  md: ix % 2 === 0 ? "row" : "row-reverse",
                 },
+                width: "fit-content",
               }}
             >
-              {item}
+              {/* Timeline dot */}
+              <Box
+                sx={{
+                  position: "absolute",
+                  left: { xs: "5%", md: "50%" },
+                  transform: "translateX(-50%)",
+                  width: 10,
+                  height: 10,
+                  borderRadius: "50%",
+                  backgroundColor: "primary.main",
+                  border: "4px solid",
+                  borderColor: "background.default",
+                  display: "block",
+                  zIndex: 10,
+                }}
+              />
+              {/* Item */}
+              <Box
+                paddingLeft={{ xs: "8%", md: 0 }}
+                sx={{
+                  textAlign: {
+                    xs: "left",
+                    md: ix % 2 === 0 ? "right" : "left",
+                  },
+                  transform: {
+                    md:
+                      ix % 2 === 0
+                        ? "translateX(-50%) translateX(-10px)"
+                        : "translateX(50%) translateX(10px)",
+                  },
+                }}
+              >
+                {item}
+              </Box>
             </Box>
-            {/* Item spacer */}
-            <Box sx={{ flex: 1, display: { xs: "none", md: "block" } }} />
-          </Box>
-        ))}
+          ))}
 
-        {lastNode && (
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: { xs: "flex-start", md: "center" },
-              paddingLeft: { xs: "2%", md: 0 },
-              position: "relative",
-              zIndex: 15,
-            }}
-          >
-            {lastNode}
-          </Box>
-        )}
+          {lastNode && (
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: { xs: "flex-start", md: "center" },
+                paddingLeft: { xs: "2%", md: 0 },
+                position: "relative",
+                zIndex: 15,
+              }}
+            >
+              {lastNode}
+            </Box>
+          )}
+        </Box>
       </Box>
     </Box>
   );

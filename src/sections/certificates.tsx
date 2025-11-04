@@ -55,12 +55,19 @@ export const CertificatesSection = () => {
               display="flex"
               flexDirection={{ xs: "column", md: "row" }}
               padding={2}
+              gap={5}
+              alignItems="center"
             >
               <Box>{cert.emoji}</Box>
               <Box>
                 <Typography variant="h5">{cert.title}</Typography>
                 {/* Issuer */}
-                <Typography variant="subtitle1" display="flex" gap={1} alignItems={"center"}>
+                <Typography
+                  variant="subtitle1"
+                  display="flex"
+                  gap={1}
+                  alignItems={"center"}
+                >
                   <GraduationCapIcon
                     sx={{
                       fontSize: "var(--mui-typography-subtitle1-fontSize)",
@@ -69,7 +76,12 @@ export const CertificatesSection = () => {
                   {cert.issuer}
                 </Typography>
                 {/* Year */}
-                <Typography variant="subtitle1" display="flex" gap={1} alignItems={"center"}>
+                <Typography
+                  variant="subtitle1"
+                  display="flex"
+                  gap={1}
+                  alignItems={"center"}
+                >
                   <CalendarIcon
                     sx={{
                       fontSize: "var(--mui-typography-subtitle1-fontSize)",
@@ -78,9 +90,9 @@ export const CertificatesSection = () => {
                   {cert.year}
                 </Typography>
               </Box>
-              <AwardIcon 
+              <AwardIcon
                 sx={{
-                  color: "glow.50"
+                  color: "glow.50",
                 }}
                 className="hover-primary"
               />
