@@ -15,7 +15,9 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
         xs: "5%",
       }}
     >
-      <Box component="div" position="relative">
+      <Box component="div" position="relative" paddingX={
+        {xs: "5%"}
+      }>
         {/* Vertical line */}
         <Box
           position="absolute"
@@ -41,9 +43,11 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
             <Box
               key={ix} // eslint-disable-line react-x/no-array-index-key
               sx={{
-                position: "relative",
+                // Only in md and up when time line is centered
+                // we want the dot position to be relative to this box
+                position: { md: "relative" },
                 display: "flex",
-                left: { md: "50%"},
+                left: { md: "50%" },
                 transform: { md: "translateX(-50%)" },
                 alignItems: "center",
                 gap: 4,
@@ -71,7 +75,6 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
               />
               {/* Item */}
               <Box
-                paddingLeft={{ xs: "8%", md: 0 }}
                 sx={{
                   textAlign: {
                     xs: "left",
