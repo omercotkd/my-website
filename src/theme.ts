@@ -1,8 +1,10 @@
-import { createTheme } from "@mui/material/styles";
-
+import { createTheme, type PaletteColorOptions } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface TypeBackground {
     transparent: string;
+  }
+  interface PaletteOptions {
+    border: PaletteColorOptions;
   }
 }
 
@@ -34,7 +36,11 @@ export const theme = createTheme({
       50: "#a1a1a1ff",
       100: "#a1a1a1d1",
     },
-    divider: "hsla(258, 90%, 66%, 0.20)",
+    border: {
+      main: "#8b5cf680",
+      dark: "#8b5cf61a"
+    },
+    divider: "rgba(137, 90, 246, 0.2)",
   },
   typography: {
     fontFamily: "Inter, system-ui, -apple-system, sans-serif",
