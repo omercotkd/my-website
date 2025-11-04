@@ -77,9 +77,10 @@ export const AboutSection = () => {
 
       {/* Hobbies */}
       <Grid container spacing={3} width="90%">
-        {hobbies.map((hobby, index) => (
+        {hobbies.map((hobby, ix) => (
           <Grid
-            key={index}
+            // static list we can use index as key
+            key={ix} // eslint-disable-line react-x/no-array-index-key
             size={{
               xs: 6,
               md: 3,

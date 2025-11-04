@@ -4,7 +4,7 @@ import "./index.css";
 import "./animation.css";
 import App from "./App.tsx";
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("root") ?? document.createElement("div")).render(
   <StrictMode>
     <App />
   </StrictMode>

@@ -78,9 +78,10 @@ export const ToolsSection = () => {
 
       {/* Hobbies */}
       <Grid container spacing={3} width="90%">
-        {tools.map((tool, index) => (
+        {tools.map((tool) => (
           <Grid
-            key={index}
+            // name is unique we can use it as key
+            key={tool.name}
             size={{
               xs: 6,
               sm: 4,

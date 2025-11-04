@@ -55,9 +55,11 @@ const StarsProgressBar = ({
 }) => {
   const fontSize = 16;
     
+  const ArraySize5 = [...Array(5).keys()];
+
   return (
     <Box sx={{ display: "flex", gap: 0.5 }}>
-      {[...Array(5)].map((_, i) => {
+      {ArraySize5.map((i) => {
         if (i < Math.floor(progress / 20)) {
           return (
             <StarIcon
@@ -66,7 +68,7 @@ const StarsProgressBar = ({
                 color: "primary.main",
                 fontSize,
                 transition: "all 0.3s",
-                transitionDelay: `${i * 100}ms`,
+                transitionDelay: `${(i * 100).toString()}ms`,
               }}
               className={className}
             />
@@ -80,7 +82,7 @@ const StarsProgressBar = ({
                 color: "primary.main",
                 fontSize,
                 transition: "all 0.3s",
-                transitionDelay: `${i * 100}ms`,
+                transitionDelay: `${(i * 100).toString()}ms`,
               }}
               className={className}
             />
@@ -93,7 +95,7 @@ const StarsProgressBar = ({
                 color: "rgba(250, 250, 250, 0.1)",
                 fontSize,
                 transition: "all 0.3s",
-                transitionDelay: `${i * 100}ms`,
+                transitionDelay: `${(i * 100).toString()}ms`,
               }}
               className={className}
             />

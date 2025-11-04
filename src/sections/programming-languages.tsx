@@ -56,9 +56,10 @@ export const ProgrammingLanguagesSection = () => {
     >
       <SectionTitle title={plTranslation.title()} />
       <Grid container spacing={3} width="80%">
-        {languages.map((lang, index) => (
+        {languages.map((lang) => (
           <Grid
-            key={index}
+            // name is unique we can use it as key
+            key={lang.name}
             size={{
               xs: 12,
               sm: 6,

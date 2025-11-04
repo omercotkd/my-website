@@ -24,11 +24,11 @@ export const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: navBarTranslations.about(), href: "#about" },
-    { label: navBarTranslations.skills(), href: "#skills" },
-    { label: navBarTranslations.experience(), href: "#experience" },
-    { label: navBarTranslations.certificates(), href: "#certificates" },
-    { label: navBarTranslations.contact(), href: "#contact" },
+    { label: navBarTranslations.about(), href: "#about", id: "about" },
+    { label: navBarTranslations.skills(), href: "#skills", id: "skills" },
+    { label: navBarTranslations.experience(), href: "#experience", id: "experience" },
+    { label: navBarTranslations.certificates(), href: "#certificates", id: "certificates" },
+    { label: navBarTranslations.contact(), href: "#contact", id: "contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -45,11 +45,10 @@ export const Navbar = () => {
 
   const NavStack = (
     <>
-      {navItems.map((item, ix) => (
+      {navItems.map((item) => (
         <Typography
           component="a"
-          // static list we can use index as key
-          key={ix} // eslint-disable-line react/no-array-index-key
+          key={item.id}
           href={item.href}
           onClick={(e) => {
             e.preventDefault();

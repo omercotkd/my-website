@@ -56,8 +56,8 @@ export const DBsSection = () => {
       <SectionTitle title={dbsTranslation.title()} />
       {/* Big Databases */}
       <Box width="80%">
-        {dbsBig.map((db, index) => (
-          <GlowPaper key={index}>
+        {dbsBig.map((db) => (
+          <GlowPaper key={db.name}>
             <Box
               p={3}
               display="flex"
@@ -78,9 +78,10 @@ export const DBsSection = () => {
                   justifyContent="center"
                   gap={1}
                 >
-                  {db.skills.map((skill, skillIndex) => (
+                  {db.skills.map((skill) => (
                     <Box
-                      key={skillIndex}
+                      // each skill is unique we can use it as key
+                      key={skill}
                       px={2}
                       py={0.5}
                       borderRadius={16}
@@ -106,9 +107,9 @@ export const DBsSection = () => {
         display="flex"
         justifyContent="center"
       >
-        {dbsSmall.map((db, index) => (
+        {dbsSmall.map((db) => (
           <Grid
-            key={index}
+            key={db.name}
             size={{
               xs: 12,
               sm: 6,

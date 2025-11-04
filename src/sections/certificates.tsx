@@ -49,8 +49,10 @@ export const CertificatesSection = () => {
     >
       <SectionTitle title={t("certificates.title")} />
       <TimeLine
-        timeLineItems={certificates.map((cert, index) => (
-          <GlowPaper key={index}>
+        timeLineItems={certificates.map((cert, ix) => (
+          // static list we can use index as key
+          // eslint-disable-next-line react-x/no-array-index-key
+          <GlowPaper key={ix}>
             <div>{cert.title}</div>
           </GlowPaper>
         ))}

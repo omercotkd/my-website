@@ -30,9 +30,9 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
           mx: "auto",
         }}
       >
-        {timeLineItems.map((item, index) => (
+        {timeLineItems.map((item, ix) => (
           <Box
-            key={index}
+            key={ix} // eslint-disable-line react-x/no-array-index-key
             sx={{
               position: "relative",
               display: "flex",
@@ -41,7 +41,7 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
               gap: 4,
               flexDirection: {
                 xs: "column",
-                md: index % 2 === 0 ? "row" : "row-reverse",
+                md: ix % 2 === 0 ? "row" : "row-reverse",
               }
             }}
           >
@@ -68,7 +68,7 @@ export const TimeLine = ({ timeLineItems, lastNode }: TimeLineProps) => {
                 flex: 1,
                 textAlign: {
                   xs: "left",
-                  md: index % 2 === 0 ? "right" : "left",
+                  md: ix % 2 === 0 ? "right" : "left",
                 },
               }}
             >

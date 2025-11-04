@@ -217,10 +217,7 @@ export const StarIcon = createSvgIcon(
   "StarIcon"
 );
 
-export const PercentageStarIcon = ({ percentage }: { percentage?: number }) => {
-  if (percentage === undefined) {
-    percentage = 50;
-  }
+export const PercentageStarIcon = ({ percentage }: { percentage: number }) => {
 
   return createSvgIcon(
     <svg
@@ -233,9 +230,9 @@ export const PercentageStarIcon = ({ percentage }: { percentage?: number }) => {
     >
       <defs>
         <linearGradient id="half-gradient">
-          <stop offset={`${percentage}%`} stopColor="currentColor" />
+          <stop offset={percentage} stopColor="currentColor" />
           <stop
-            offset={`${percentage}%`}
+            offset={percentage}
             stopColor="rgba(250, 250, 250, 0.1)"
           />
         </linearGradient>
