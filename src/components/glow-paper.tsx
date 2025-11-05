@@ -41,6 +41,14 @@ export const GlowPaper = ({ children, border, hoverBorderColor }: GlowPaperProps
             display: "block",
             transition: "display 0.3s",
           },
+          "& .bg-hover-glow100": {
+            bgcolor: "var(--mui-palette-glow-100)",
+            transition: "color 0.3s",
+          },
+          "& .hover-text-primary": {
+            color: "var(--mui-palette-text-primary)",
+            transition: "color 0.3s",
+          },
         },
       }}
     >

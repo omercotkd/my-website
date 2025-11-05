@@ -91,7 +91,7 @@ export const theme = createTheme({
     },
     body2: {
       fontSize: "16px",
-      fontWeight: 120,
+      fontWeight: 400,
       lineHeight: 1.5,
       color: "var(--mui-palette-text-secondary)",
     },

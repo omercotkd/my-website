@@ -25,7 +25,7 @@ type RootTranslation = {
 		bio: string
 		hobbies: {
 			/**
-			 * T​r​a​v​e​l​i​n​g
+			 * B​a​c​k​p​a​c​k​i​n​g
 			 */
 			traveling: string
 			/**
@@ -37,7 +37,7 @@ type RootTranslation = {
 			 */
 			bakingAndCooking: string
 			/**
-			 * T​e​c​h​n​o​l​o​g​y
+			 * G​a​m​i​n​g
 			 */
 			technology: string
 		}
@@ -77,6 +77,26 @@ type RootTranslation = {
 		 * S​o​m​e​t​h​i​n​g​ ​t​h​a​t​ ​d​e​s​c​r​i​b​e​s​ ​m​y​ ​w​o​r​k​ ​e​t​h​i​c​ ​o​r​ ​p​e​r​s​o​n​a​l​i​t​y​.
 		 */
 		myPunchline: string
+	}
+	howStarted: {
+		/**
+		 * H​o​w​ ​I​ ​S​t​a​r​t​e​d
+		 */
+		title: string
+		steps: {
+			/**
+			 * I​ ​w​r​o​t​e​ ​m​y​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​c​o​d​e​ ​i​n​.​.​.
+			 */
+			'0': string
+			/**
+			 * I​ ​b​u​i​l​t​ ​m​y​ ​f​i​r​s​t​ ​p​r​o​j​e​c​t​ ​i​n​.​.​.
+			 */
+			'1': string
+			/**
+			 * I​ ​g​o​t​ ​m​y​ ​f​i​r​s​t​ ​d​e​v​e​l​o​p​e​r​ ​r​o​l​e​ ​i​n​.​.​.
+			 */
+			'2': string
+		}
 	}
 	experience: {
 		/**
@@ -200,7 +220,7 @@ export type TranslationFunctions = {
 		bio: () => LocalizedString
 		hobbies: {
 			/**
-			 * Traveling
+			 * Backpacking
 			 */
 			traveling: () => LocalizedString
 			/**
@@ -212,7 +232,7 @@ export type TranslationFunctions = {
 			 */
 			bakingAndCooking: () => LocalizedString
 			/**
-			 * Technology
+			 * Gaming
 			 */
 			technology: () => LocalizedString
 		}
@@ -252,6 +272,26 @@ export type TranslationFunctions = {
 		 * Something that describes my work ethic or personality.
 		 */
 		myPunchline: () => LocalizedString
+	}
+	howStarted: {
+		/**
+		 * How I Started
+		 */
+		title: () => LocalizedString
+		steps: {
+			/**
+			 * I wrote my first line of code in...
+			 */
+			'0': () => LocalizedString
+			/**
+			 * I built my first project in...
+			 */
+			'1': () => LocalizedString
+			/**
+			 * I got my first developer role in...
+			 */
+			'2': () => LocalizedString
+		}
 	}
 	experience: {
 		/**

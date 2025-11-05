@@ -89,7 +89,13 @@ export const ExperienceSection = () => {
         timeLineItems={experiences.map((exp, ix) => (
           // eslint-disable-next-line react-x/no-array-index-key
           <GlowPaper key={ix}>
-            <Box maxWidth={{ md: "40vw" }} padding={3}>
+            <Box
+              maxWidth={{ md: "40vw" }}
+              padding={3}
+              display="flex"
+              flexDirection="column"
+              gap={2}
+            >
               <Box
                 display="flex"
                 flexDirection="row"
@@ -105,11 +111,16 @@ export const ExperienceSection = () => {
                   justifyContent="center"
                   alignItems="center"
                   border="1px solid var(--mui-palette-glow-50)"
+                  className="bg-hover-glow100"
                 >
                   <exp.icon sx={{ fontSize: "24px", color: "primary.main" }} />
                 </Box>
                 <Box>
-                  <Typography variant="h6" fontWeight="bold" className="hover-primary">
+                  <Typography
+                    variant="h6"
+                    fontWeight="bold"
+                    className="hover-primary"
+                  >
                     {exp.title}
                   </Typography>
                   <Typography variant="subtitle1" color="text.secondary">
@@ -117,16 +128,26 @@ export const ExperienceSection = () => {
                   </Typography>
                 </Box>
               </Box>
-              <Typography variant="body2">{exp.description}</Typography>
+              <Typography variant="body2" color={"text.muted"}>
+                {exp.description}
+              </Typography>
               <Box
                 display={"flex"}
                 flexDirection={"row"}
                 flexWrap={"wrap"}
                 gap={1}
-                marginTop={2}
               >
                 {exp.mainSkills.map((skill) => (
-                  <Typography key={skill} variant="body2">
+                  <Typography
+                    key={skill}
+                    variant="subtitle2"
+                    color="primary.main"
+                    bgcolor={"glow.200"}
+                    paddingX={1}
+                    borderRadius={2}
+                    border="1px solid var(--mui-palette-glow-100)"
+                    fontWeight={400}
+                  >
                     {skill}
                   </Typography>
                 ))}

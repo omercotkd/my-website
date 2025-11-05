@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
+import type React from "react";
 
-export const SectionTitle = ({ title }: { title: string }) => {
+export const SectionTitle = ({ title }: { title: React.ReactNode }) => {
   const lineGradient =
     "linear-gradient(to right, var(--mui-palette-primary-main), var(--mui-palette-primary-light))";
 
