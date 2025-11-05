@@ -10,28 +10,19 @@ export const CertificatesSection = () => {
 
   const certificates = [
     {
-      title: "Advanced React Patterns",
-      issuer: "Frontend Masters",
-      year: "2024",
-      emoji: "⚛️",
-    },
-    {
-      title: "MongoDB Certified Developer",
-      issuer: "MongoDB University",
-      year: "2023",
+      title: "MongoDB Associate Developer",
+      issuer: "MongoDB",
+      year: "2025",
       emoji: "🍃",
+      certificateUrl:
+        "https://www.credly.com/badges/a23d4373-b218-4636-9711-36aa82019eda/linked_in_profile",
     },
     {
-      title: "Python for Data Science",
-      issuer: "Coursera",
-      year: "2023",
-      emoji: "🐍",
-    },
-    {
-      title: "AWS Solutions Architect",
-      issuer: "Amazon Web Services",
-      year: "2022",
-      emoji: "☁️",
+      title: certificatesTranslation.moreComingSoon(),
+      issuer: "",
+      year: "",
+      emoji: "",
+      certificateUrl: "",
     },
   ];
 
@@ -53,18 +44,33 @@ export const CertificatesSection = () => {
           <GlowPaper key={ix}>
             <Box
               display="flex"
-              flexDirection={{ xs: "column", md: "row" }}
+              flexDirection={{
+                xs: "column",
+                md: ix % 2 === 0 ? "row-reverse" : "row",
+              }}
               padding={2}
               gap={5}
               alignItems="center"
+              component={cert.certificateUrl ? "a" : "div"}
+              href={cert.certificateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textDecoration: "none",
+                color: "unset",
+              }}
             >
-              <Box>{cert.emoji}</Box>
+              <Box fontSize="36px" className="hover-rotate">
+                {cert.emoji}
+              </Box>
               <Box>
-                <Typography variant="h5">{cert.title}</Typography>
+                <Typography variant="h5" className="hover-primary">
+                  {cert.title}
+                </Typography>
                 {/* Issuer */}
                 <Typography
                   variant="subtitle1"
-                  display="flex"
+                  display={cert.issuer ? "flex" : "none"}
                   gap={1}
                   alignItems={"center"}
                 >
@@ -78,7 +84,7 @@ export const CertificatesSection = () => {
                 {/* Year */}
                 <Typography
                   variant="subtitle1"
-                  display="flex"
+                  display={cert.year ? "flex" : "none"}
                   gap={1}
                   alignItems={"center"}
                 >
@@ -99,25 +105,6 @@ export const CertificatesSection = () => {
             </Box>
           </GlowPaper>
         ))}
-        lastNode={
-          <GlowPaper border="2px dashed">
-            <Box
-              sx={{
-                p: 3,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: 1.5,
-                color: "text.secondary",
-              }}
-            >
-              <AwardIcon sx={{ color: "secondary.main", fontSize: 20 }} />
-              <Typography>
-                {certificatesTranslation.moreComingSoon()}
-              </Typography>
-            </Box>
-          </GlowPaper>
-        }
       />
     </Box>
   );

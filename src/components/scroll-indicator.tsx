@@ -19,18 +19,13 @@ export const ScrollIndicator = () => {
     };
   }, []);
 
-  if (!visible) return null;
-
   return (
     <Box
       component="div"
-      position="absolute"
-      bottom="32px"
-      left="50%"
-      sx={{
-        transform: "transalteX(-50%)",
-      }}
       className="animate-bounce"
+      sx={{
+        opacity: visible ? 1 : 0,
+      }}
     >
       <Box
         component="div"

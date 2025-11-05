@@ -104,7 +104,7 @@ export const AboutSection = () => {
                   }}
                   className="hover-rotate"
                 />
-                <Typography variant="subtitle1">
+                <Typography variant="subtitle1" textAlign={"center"}>
                   {hobby.label}
                 </Typography>
               </Box>

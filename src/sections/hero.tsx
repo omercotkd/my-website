@@ -68,6 +68,7 @@ export const HeroSection = () => {
         flexDirection="column"
         alignItems="center"
         gap={"2rem"}
+        textAlign={"center"}
       >
         {/* Profile Picture */}
         <ProfilePicture />
@@ -93,6 +94,7 @@ export const HeroSection = () => {
             "{heroTranslation.myPunchline()}"
           </Typography>
         </Box>
+        <ScrollIndicator />
         {/* Social Buttons */}
         <Box component="div" display="flex" justifyContent="center" gap="1rem">
           <GitHubButton />
@@ -100,7 +102,7 @@ export const HeroSection = () => {
           <EmailButton />
         </Box>
       </Box>
-      <ScrollIndicator />
+      
     </Box>
   );
 };

@@ -12,6 +12,7 @@ export const SectionTitle = ({ title }: { title: string }) => {
         flexDirection: "column",
         gap: 2,
       }}
+      maxWidth="90%"
     >
       <Typography
         variant="h2"
