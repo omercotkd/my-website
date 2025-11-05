@@ -19,7 +19,7 @@ export default {
   volunteerExperience: {
     carenet: {
       title: "Volunteer Developer",
-      company: "Carenet",
+      organization: "Carenet",
       description:
         "Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.",
     },

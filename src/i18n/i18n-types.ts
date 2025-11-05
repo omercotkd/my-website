@@ -130,7 +130,7 @@ type RootTranslation = {
 				/**
 				 * C​a​r​e​n​e​t
 				 */
-				company: string
+				organization: string
 				/**
 				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
 				 */
@@ -305,7 +305,7 @@ export type TranslationFunctions = {
 				/**
 				 * Carenet
 				 */
-				company: () => LocalizedString
+				organization: () => LocalizedString
 				/**
 				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
 				 */
