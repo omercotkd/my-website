@@ -78,6 +78,66 @@ type RootTranslation = {
 		 */
 		myPunchline: string
 	}
+	experience: {
+		/**
+		 * E​x​p​e​r​i​e​n​c​e
+		 */
+		title: string
+		/**
+		 * #​V​o​l​u​n​t​r​e​e​r​E​x​p​e​r​i​e​n​c​e
+		 */
+		volunteerHashtag: string
+		/**
+		 * P​r​e​s​e​n​t
+		 */
+		present: string
+		jobExperiences: {
+			saitlabs: {
+				/**
+				 * F​u​l​l​-​S​t​a​c​k​ ​D​e​v​e​l​o​p​e​r​ ​(​B​a​c​k​e​n​d​ ​F​o​c​u​s​e​d​)
+				 */
+				title: string
+				/**
+				 * S​a​i​t​l​a​b​s
+				 */
+				company: string
+				/**
+				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
+				 */
+				description: string
+			}
+			abaHatuv: {
+				/**
+				 * F​u​l​l​-​S​t​a​c​k​ ​D​e​v​e​l​o​p​e​r
+				 */
+				title: string
+				/**
+				 * A​b​a​H​a​t​u​v
+				 */
+				company: string
+				/**
+				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
+				 */
+				description: string
+			}
+		}
+		volunteerExperience: {
+			carenet: {
+				/**
+				 * V​o​l​u​n​t​e​e​r​ ​D​e​v​e​l​o​p​e​r
+				 */
+				title: string
+				/**
+				 * C​a​r​e​n​e​t
+				 */
+				company: string
+				/**
+				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
+				 */
+				description: string
+			}
+		}
+	}
 	aboutQa: {
 		/**
 		 * Q​&​A​ ​A​b​o​u​t​ ​M​e
@@ -192,6 +252,66 @@ export type TranslationFunctions = {
 		 * Something that describes my work ethic or personality.
 		 */
 		myPunchline: () => LocalizedString
+	}
+	experience: {
+		/**
+		 * Experience
+		 */
+		title: () => LocalizedString
+		/**
+		 * #VoluntreerExperience
+		 */
+		volunteerHashtag: () => LocalizedString
+		/**
+		 * Present
+		 */
+		present: () => LocalizedString
+		jobExperiences: {
+			saitlabs: {
+				/**
+				 * Full-Stack Developer (Backend Focused)
+				 */
+				title: () => LocalizedString
+				/**
+				 * Saitlabs
+				 */
+				company: () => LocalizedString
+				/**
+				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
+				 */
+				description: () => LocalizedString
+			}
+			abaHatuv: {
+				/**
+				 * Full-Stack Developer
+				 */
+				title: () => LocalizedString
+				/**
+				 * AbaHatuv
+				 */
+				company: () => LocalizedString
+				/**
+				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
+				 */
+				description: () => LocalizedString
+			}
+		}
+		volunteerExperience: {
+			carenet: {
+				/**
+				 * Volunteer Developer
+				 */
+				title: () => LocalizedString
+				/**
+				 * Carenet
+				 */
+				company: () => LocalizedString
+				/**
+				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
+				 */
+				description: () => LocalizedString
+			}
+		}
 	}
 	aboutQa: {
 		/**

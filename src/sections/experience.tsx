@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { GlowPaper } from "@/components/glow-paper";
 import { SectionTitle } from "@/components/section-title";
 import { TimeLine } from "@/components/time-line";
+import { CodeIcon, RocketIcon } from "@/components/icons";
 
 export const ExperienceSection = () => {
   const t = (key: string) => {
@@ -10,11 +11,38 @@ export const ExperienceSection = () => {
 
   const jobExperiences = [
     {
-      title: "Advanced React Patterns",
+      title: "Full-Stack Developer",
+      company: "AbaHatuv",
+      startYear: "2024",
+      endYear: "present",
+      icon: RocketIcon,
+      mainSkills: [
+        "React",
+        "TypeScript",
+        "Python",
+        "MongoDB",
+        "FastAPI",
+        "Git",
+        "Docker",
+        "AWS",
+      ],
+    },
+    {
+      title: "Full-Stack Developer (Backend Focused)",
+      company: "Saitlabs",
       startYear: "2022",
       endYear: "2024",
-      icon: <div></div>,
-      mainSkills: ["React", "TypeScript", "Frontend Architecture"],
+      icon: CodeIcon,
+      mainSkills: [
+        "Python",
+        "MongoDB",
+        "FastAPI",
+        "Flask",
+        "React",
+        "Redis",
+        "Git",
+        "Node.js",
+      ],
     },
   ];
 

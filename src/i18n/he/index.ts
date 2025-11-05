@@ -8,11 +8,14 @@ import tools from "./tools";
 import dbs from "./dbs";
 import aboutQa from "./about-qa";
 import certificates from "./certificates";
+import experience from "./experience";
+
 
 const he = {
   about,
   navbar,
   hero,
+  experience,
   aboutQa,
   tools,
   programmingLanguages,
