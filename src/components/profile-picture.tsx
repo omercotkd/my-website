@@ -6,6 +6,7 @@ export const ProfilePicture = () => {
     <Box
       component="img"
       src={MyPicture}
+      fetchPriority="high"
       alt="Omer Cohen"
       width="192px"
       borderRadius="50%"

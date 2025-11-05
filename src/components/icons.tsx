@@ -112,7 +112,7 @@ export const DumbbellIcon = createSvgIcon(
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    stroke-width="2"
+    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -229,8 +229,8 @@ export const PercentageStarIcon = ({ percentage }: { percentage: number }) => {
     >
       <defs>
         <linearGradient id="half-gradient">
-          <stop offset={percentage} stopColor="currentColor" />
-          <stop offset={percentage} stopColor="rgba(250, 250, 250, 0.1)" />
+          <stop offset={`${percentage.toFixed(0)}%`} stopColor="currentColor" />
+          <stop offset={`${percentage.toFixed(0)}%`} stopColor="rgba(250, 250, 250, 0.1)" />
         </linearGradient>
       </defs>
       <path

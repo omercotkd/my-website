@@ -22,7 +22,7 @@ export const CertificatesSection = () => {
       issuer: "",
       year: "",
       emoji: "",
-      certificateUrl: "",
+      certificateUrl: undefined,
     },
   ];
 
