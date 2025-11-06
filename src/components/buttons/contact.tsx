@@ -1,3 +1,4 @@
+import type React from "react";
 import { EmailIcon, GitHubIcon, LinkedInIcon } from "../icons";
 import Button from "@mui/material/Button";
 
@@ -74,4 +75,58 @@ export const EmailButton = () => {
       Email
     </Button>
   );
+};
+
+const ContactIconButton = ({
+  href,
+  Icon,
+}: {
+  href: string;
+  Icon: React.ElementType;
+}) => {
+  return (
+    <Button
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      sx={{
+        minWidth: "46px",
+        minHeight: "46px",
+        bgcolor: "glow.200",
+        color: "text.primary",
+        borderRadius: "25%",
+        border: "1px solid",
+        borderColor: "glow.50",
+        ":hover" : {
+          backgroundColor: "glow.100",
+          boxShadow: "0 4px 8px var(--mui-palette-glow-50)",
+          ".contact-icon": {
+            transform: "scale(1.1)",
+            transition: "transform 0.3s",
+          }
+        }
+      }}
+    >
+      <Icon
+        style={{
+          width: "20px",
+          height: "20px",
+          color: "var(--mui-palette-primary-main)",
+        }}
+        className="contact-icon"
+      />
+    </Button>
+  );
+};
+
+export const GitHubIconButton = () => {
+  return <ContactIconButton href={MY_GITHUB_URL} Icon={GitHubIcon} />;
+};
+
+export const LinkedInIconButton = () => {
+  return <ContactIconButton href={MY_LINKEDIN_URL} Icon={LinkedInIcon} />;
+};
+
+export const EmailIconButton = () => {
+  return <ContactIconButton href={MY_EMAIL_URL} Icon={EmailIcon} />;
 };
