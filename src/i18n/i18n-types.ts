@@ -206,6 +206,24 @@ type RootTranslation = {
 		 */
 		moreComingSoon: string
 	}
+	footer: {
+		/**
+		 * A​l​l​ ​r​i​g​h​t​s​ ​r​e​s​e​r​v​e​d​.
+		 */
+		rightsReserved: string
+		/**
+		 * B​u​i​l​t​ ​w​i​t​h​ ​R​e​a​c​t​J​S​ ​&​ ​M​a​t​e​r​i​a​l​-​U​I
+		 */
+		builtWith: string
+		/**
+		 * L​a​n​g​u​a​g​e
+		 */
+		language: string
+		/**
+		 * C​o​n​t​a​c​t
+		 */
+		contact: string
+	}
 }
 
 export type TranslationFunctions = {
@@ -400,6 +418,24 @@ export type TranslationFunctions = {
 		 * More coming Soon...
 		 */
 		moreComingSoon: () => LocalizedString
+	}
+	footer: {
+		/**
+		 * All rights reserved.
+		 */
+		rightsReserved: () => LocalizedString
+		/**
+		 * Built with ReactJS & Material-UI
+		 */
+		builtWith: () => LocalizedString
+		/**
+		 * Language
+		 */
+		language: () => LocalizedString
+		/**
+		 * Contact
+		 */
+		contact: () => LocalizedString
 	}
 }
 

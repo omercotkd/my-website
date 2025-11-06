@@ -10,6 +10,7 @@ import aboutQa from "./about-qa";
 import certificates from "./certificates";
 import experience from "./experience";
 import howStarted from "./how-started";
+import footer from "./footer";
 
 const en = {
   about,
@@ -21,7 +22,8 @@ const en = {
   programmingLanguages,
   tools,
   dbs,
-  certificates
+  certificates,
+  footer
 } satisfies BaseTranslation;
 
 export default en;

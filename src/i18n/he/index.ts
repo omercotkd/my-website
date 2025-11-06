@@ -10,7 +10,7 @@ import aboutQa from "./about-qa";
 import certificates from "./certificates";
 import experience from "./experience";
 import howStarted from "./how-started";
-
+import footer from "./footer";
 
 const he = {
   about,
@@ -22,7 +22,8 @@ const he = {
   tools,
   programmingLanguages,
   dbs,
-  certificates
+  certificates,
+  footer
 } satisfies Translation;
 
 export default he;
