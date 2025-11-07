@@ -35,6 +35,7 @@ export const CertificatesSection = () => {
       display="flex"
       gap={6}
       flexDirection="column"
+      alignItems="center"
     >
       <SectionTitle title={certificatesTranslation.title()} />
       <TimeLine

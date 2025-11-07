@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const translation = useI18nContext();
-  
+
   const language = translation.locale;
 
   const navBarTranslations = translation.LL.navbar;
@@ -21,15 +21,25 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => { window.removeEventListener("scroll", handleScroll); };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const navItems = [
     { label: navBarTranslations.about(), href: "#about", id: "about" },
     { label: navBarTranslations.skills(), href: "#skills", id: "skills" },
-    { label: navBarTranslations.experience(), href: "#experience", id: "experience" },
-    { label: navBarTranslations.certificates(), href: "#certificates", id: "certificates" },
-    { label: navBarTranslations.contact(), href: "#contact", id: "contact" },
+    {
+      label: navBarTranslations.certificates(),
+      href: "#certificates",
+      id: "certificates",
+    },
+    {
+      label: navBarTranslations.experience(),
+      href: "#experience",
+      id: "experience",
+    },
+    { label: navBarTranslations.contact(), href: "#contact-info", id: "contact" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -44,35 +54,10 @@ export const Navbar = () => {
     const nextLanguage: Locales = language === "en" ? "he" : "en";
 
     translation.setLocale(nextLanguage);
-
   };
 
   const NavStack = (
     <>
-      {navItems.map((item) => (
-        <Typography
-          component="a"
-          key={item.id}
-          href={item.href}
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection(item.href);
-          }}
-          position={"relative"}
-          color="text.muted"
-          fontSize="16px"
-        >
-          {item.label}
-          <Typography
-            bottom={0}
-            left={0}
-            width={0}
-            height="2px"
-            component="span"
-            position="absolute"
-          />
-        </Typography>
-      ))}
       <Button
         variant="hover"
         color="primary"
@@ -91,6 +76,45 @@ export const Navbar = () => {
         />
         {language.toUpperCase()}
       </Button>
+      {navItems.map((item) => (
+        <Typography
+          component="a"
+          key={item.id}
+          href={item.href}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(item.href);
+          }}
+          position={"relative"}
+          color="text.muted"
+          fontSize="16px"
+          className="transition-all"
+          sx={{
+            "&:hover": {
+              color: "primary.main",
+              "& span": {
+                width: "100%",
+              },
+            },
+          }}
+        >
+          {item.label}
+          <Box
+            component="span"
+            bottom={0}
+            left={0}
+            position="absolute"
+            display="inline-block"
+            borderRadius={2}
+            height={2}
+            bgcolor={"primary.main"}
+            width={0}
+            sx={{
+              transition: "width 0.15s ease-out ",
+            }}
+          />
+        </Typography>
+      ))}
     </>
   );
 
@@ -104,15 +128,6 @@ export const Navbar = () => {
       zIndex={50}
       width="100%"
       bgcolor={isScrolled ? "background.default" : "background.transparent"}
-      //     .duration-300 {
-      //   --tw-duration: .3s;
-      //   transition-duration: .3s;
-      // }
-      className={`transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg shadow-primary/5"
-          : "bg-transparent"
-      }`}
     >
       <Container>
         <Box
@@ -122,21 +137,6 @@ export const Navbar = () => {
           alignItems="center"
           height={64}
         >
-          {/* Logo */}
-          <Typography
-            component="a"
-            href="#hero"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection("#hero");
-            }}
-            fontSize="16px"
-            color="primary"
-            fontFamily={"monospace"}
-            className="light-primary-hover"
-          >
-            {"<OC />"}
-          </Typography>
           <Box
             component="div"
             display={{ md: "flex", xs: "none" }}
@@ -145,7 +145,6 @@ export const Navbar = () => {
           >
             {NavStack}
           </Box>
-
           {/* Mobile Menu Button */}
           <Button
             variant="text"
@@ -153,7 +152,9 @@ export const Navbar = () => {
               color: "grey.100",
               display: { md: "none" },
             }}
-            onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}
+            onClick={() => {
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
@@ -172,6 +173,21 @@ export const Navbar = () => {
               />
             )}
           </Button>
+          {/* Logo */}
+          <Typography
+            component="a"
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("#hero");
+            }}
+            fontSize="16px"
+            color="primary"
+            fontFamily={"monospace"}
+            className="light-primary-hover"
+          >
+            {"<OC />"}
+          </Typography>
         </Box>
 
         {/* Mobile Navigation */}
@@ -184,7 +200,7 @@ export const Navbar = () => {
             alignItems={"flex-start"}
             borderTop={"1px solid"}
             borderColor={"divider"}
-            paddingTop={"1rem"}
+            paddingY={"1rem"}
           >
             {NavStack}
           </Box>

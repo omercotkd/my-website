@@ -27,7 +27,7 @@ const InnerContext: ContextProvider = ({ children }) => {
       .catch(() => {
         setWasLoaded(true);
       });
-  }, [translation.locale]);
+  }, [translation]);
 
   if (!wasLoaded) return null;
 

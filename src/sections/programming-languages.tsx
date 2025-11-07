@@ -72,6 +72,7 @@ export const ProgrammingLanguagesSection = () => {
                   display="flex"
                   alignItems="center"
                   justifyContent="space-between"
+                  dir="ltr"
                 >
                   <Typography
                     variant="body1"

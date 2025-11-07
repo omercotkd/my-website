@@ -10,7 +10,7 @@ export const TimeLine = ({ timeLineItems }: TimeLineProps) => {
     <Box
       component="div"
       display="flex"
-      justifyContent={"center" }
+      justifyContent={"center"}
       marginX={{
         xs: "5%",
       }}
@@ -35,8 +35,8 @@ export const TimeLine = ({ timeLineItems }: TimeLineProps) => {
             display: "flex",
             flexDirection: "column",
             gap: 4,
-            
           }}
+          dir="ltr"
         >
           {timeLineItems.map((item, ix) => (
             <Box

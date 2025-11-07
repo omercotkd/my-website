@@ -9,15 +9,15 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
-    animation-timing-function: cubic-bezier(.8, 0, 1, 1);
-    transform: translateY(-25%);
-  }
+    0%, 100% {
+        animation-timing-function: cubic-bezier(.8, 0, 1, 1);
+        transform: translateY(-25%);
+    }
 
-  50% {
-    animation-timing-function: cubic-bezier(0, 0, .2, 1);
-    transform: none;
-  }
+    50% {
+        animation-timing-function: cubic-bezier(0, 0, .2, 1);
+        transform: none;
+    }
 }
 
 @keyframes float {
@@ -30,17 +30,9 @@
     }
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
+@keyframes pulse {
     50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
+        opacity: .5;
     }
 }
 
@@ -60,7 +52,6 @@
     animation: float 3s ease-in-out infinite;
 }
 
-.animate-gradient {
-    background-size: 200% 200%;
-    animation: gradient 8s ease infinite;
+.animate-pulse {
+    animation: pulse 2s infinite;
 }

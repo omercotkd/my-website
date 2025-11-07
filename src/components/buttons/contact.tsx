@@ -23,6 +23,7 @@ export const GitHubButton = () => {
       href={MY_GITHUB_URL}
       target="_blank"
       rel="noopener noreferrer"
+      dir="ltr"
     >
       GitHub
     </Button>
@@ -47,6 +48,7 @@ export const LinkedInButton = () => {
       sx={{
         color: "text.primary",
       }}
+      dir="ltr"
     >
       LinkedIn
     </Button>
@@ -71,6 +73,7 @@ export const EmailButton = () => {
       sx={{
         color: "text.primary",
       }}
+      dir="ltr"
     >
       Email
     </Button>
