@@ -126,7 +126,7 @@ export const Footer = () => {
             variant="subtitle1"
             display={"flex"}
             justifyContent={{ md: "flex-start", xs: "center" }}
-            width={"50%"}
+            width={{ md: "50%" }}
             alignItems={"center"}
             gap={"4px"}
           >
@@ -140,7 +140,7 @@ export const Footer = () => {
             variant="subtitle1"
             display={"flex"}
             justifyContent={{ md: "flex-end", xs: "center" }}
-            width={"50%"}
+            width={{ md: "50%" }}
             textAlign={"center"}
           >
             © {new Date().getFullYear()} {translation.LL.hero.myName()}.{" "}

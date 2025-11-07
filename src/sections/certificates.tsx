@@ -17,13 +17,6 @@ export const CertificatesSection = () => {
       certificateUrl:
         "https://www.credly.com/badges/a23d4373-b218-4636-9711-36aa82019eda/linked_in_profile",
     },
-    {
-      title: certificatesTranslation.moreComingSoon(),
-      issuer: "",
-      year: "",
-      emoji: "",
-      certificateUrl: undefined,
-    },
   ];
 
   return (
@@ -107,6 +100,28 @@ export const CertificatesSection = () => {
           </GlowPaper>
         ))}
       />
+      <GlowPaper>
+        <Box
+          display="flex"
+          flexDirection={"row"}
+          padding={2}
+          // gap={5}
+          alignItems="center"
+          component={"div"}
+        >
+          <Box>
+            <Typography variant="h5" className="hover-primary">
+              {certificatesTranslation.moreComingSoon()}
+            </Typography>
+          </Box>
+          <AwardIcon
+            sx={{
+              color: "glow.50",
+            }}
+            className="hover-primary"
+          />
+        </Box>
+      </GlowPaper>
     </Box>
   );
 };

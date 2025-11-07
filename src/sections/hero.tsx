@@ -24,7 +24,7 @@ export const HeroSection = () => {
       overflow="hidden"
       width={"100%"}
       sx={{
-        transform: "translateY(10%)",
+        transform: "translateY(5%)",
       }}
     >
       {/* Animated Background */}
