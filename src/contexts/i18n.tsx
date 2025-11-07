@@ -27,7 +27,9 @@ const InnerContext: ContextProvider = ({ children }) => {
       .catch(() => {
         setWasLoaded(true);
       });
-  }, [translation]);
+      // we use only translation.locale here
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [translation.locale]);
 
   if (!wasLoaded) return null;
 
