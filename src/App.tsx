@@ -9,15 +9,15 @@ import { ProgrammingLanguagesSection } from "./sections/programming-languages";
 import { ToolsSection } from "./sections/tools";
 import { DBsSection } from "./sections/dbs";
 import { CertificatesSection } from "./sections/certificates";
-import { AboutMeQaSection } from "./sections/about-qa";
+// import { AboutMeQaSection } from "./sections/about-qa";
 import { ExperienceSection } from "./sections/experience";
 import { HowStartedSection } from "./sections/how-started";
 import { Footer } from "./components/footer";
 
 function App() {
   return (
-    <MuiThemeProvider theme={theme}>
-      <I18nContextProvider>
+    <I18nContextProvider>
+      <MuiThemeProvider theme={theme}>
         <Navbar />
         <HeroSection />
         <AboutSection />
@@ -25,12 +25,12 @@ function App() {
         <ToolsSection />
         <DBsSection />
         <CertificatesSection />
-        <AboutMeQaSection />
+        {/* <AboutMeQaSection /> */}
         <ExperienceSection />
         <HowStartedSection />
         <Footer />
-      </I18nContextProvider>
-    </MuiThemeProvider>
+      </MuiThemeProvider>
+    </I18nContextProvider>
   );
 }
 

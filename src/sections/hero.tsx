@@ -23,6 +23,9 @@ export const HeroSection = () => {
       position="relative"
       overflow="hidden"
       width={"100%"}
+      sx={{
+        transform: "translateY(10%)",
+      }}
     >
       {/* Animated Background */}
       <Box component="div" zIndex={-1}>
@@ -84,25 +87,19 @@ export const HeroSection = () => {
           <Typography variant="h1" color="primary">
             {heroTranslation.myName()}
           </Typography>
-          <Typography variant="h3">
-            {heroTranslation.myProfession()}
-          </Typography>
-          <Typography
-            variant="body1"
-            fontStyle={"italic"}
-          >
+          <Typography variant="h3">{heroTranslation.myProfession()}</Typography>
+          <Typography variant="body1" fontStyle={"italic"}>
             "{heroTranslation.myPunchline()}"
           </Typography>
         </Box>
-        <ScrollIndicator />
         {/* Social Buttons */}
         <Box component="div" display="flex" justifyContent="center" gap="1rem">
           <GitHubButton />
           <LinkedInButton />
           <EmailButton />
         </Box>
+        <ScrollIndicator />
       </Box>
-      
     </Box>
   );
 };

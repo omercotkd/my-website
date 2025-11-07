@@ -2,6 +2,7 @@ import { createTheme, type Color } from "@mui/material/styles";
 declare module "@mui/material/styles" {
   interface TypeBackground {
     transparent: string;
+    darkPaper: string;
   }
   interface PaletteOptions {
     glow: Partial<Color>;
@@ -30,6 +31,7 @@ export const theme = createTheme({
     background: {
       default: "#0D0D0D",
       paper: "#1A1A1A00",
+      darkPaper: "#1A1A1A77",
       transparent: "#0000",
     },
     text: {
@@ -66,7 +68,7 @@ export const theme = createTheme({
       fontSize: "24px",
       fontWeight: 500,
       lineHeight: 1.5,
-      color: "var(--mui-palette-text-muted)"
+      color: "var(--mui-palette-text-muted)",
     },
     h4: {
       fontSize: "24px",
@@ -87,7 +89,7 @@ export const theme = createTheme({
       fontSize: "18px",
       fontWeight: 400,
       lineHeight: 1.5,
-      color: "var(--mui-palette-text-secondary)"
+      color: "var(--mui-palette-text-secondary)",
     },
     body2: {
       fontSize: "16px",
@@ -141,13 +143,15 @@ export const theme = createTheme({
         },
       },
     },
-    // MuiCard: {
-    //   styleOverrides: {
-    //     root: {
-    //       backgroundImage: "none",
-    //       borderRadius: 12,
-    //     },
-    //   },
-    // },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          background:
+            "linear-gradient(to right, transparent, var(--mui-palette-glow-50), transparent)",
+          height: "2px",
+          border: "none",
+        },
+      },
+    },
   },
 });

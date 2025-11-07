@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useI18nContext } from "@/i18n/i18n-react";
+import { type Locales } from "@/i18n/i18n-types";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
@@ -10,7 +11,7 @@ export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const translation = useI18nContext();
-
+  
   const language = translation.locale;
 
   const navBarTranslations = translation.LL.navbar;
@@ -40,7 +41,10 @@ export const Navbar = () => {
   };
 
   const toggleLanguage = () => {
-    console.log("Toggling language");
+    const nextLanguage: Locales = language === "en" ? "he" : "en";
+
+    translation.setLocale(nextLanguage);
+
   };
 
   const NavStack = (
@@ -85,7 +89,7 @@ export const Navbar = () => {
             height: "1rem",
           }}
         />
-        {language === "en" ? "HE" : "EN"}
+        {language.toUpperCase()}
       </Button>
     </>
   );

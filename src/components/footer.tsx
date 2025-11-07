@@ -1,5 +1,4 @@
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import { useI18nContext } from "@/i18n/i18n-react";
 import Divider from "@mui/material/Divider";
@@ -13,9 +12,13 @@ export const Footer = () => {
   const translation = useI18nContext();
 
   return (
-    <Container>
+    <Box
+        sx={{
+            bgcolor: "background.darkPaper",
+        }}
+    >
       <Divider sx={{ my: 2 }} />
-      <Box component="footer" py={"24px"} px={"48px"}>
+      <Box component="footer" px={"8%"}>
         <Box
           component={"div"}
           display={"flex"}
@@ -23,13 +26,18 @@ export const Footer = () => {
             xs: "column",
             md: "row",
           }}
-          justifyContent={{ xs: "center", md: "space-between" }}
+          justifyContent={"center"}
+          gap={4}
+          width={"100%"}
+          py="24px"
         >
+          {/* Name and profession */}
           <Box
             display="flex"
             flexDirection="column"
-            alignItems="center"
+            alignItems={{ xs: "center", md: "flex-start" }}
             gap={1}
+            width={{ md: "33%" }}
           >
             <Typography
               variant="h3"
@@ -43,14 +51,16 @@ export const Footer = () => {
               {translation.LL.hero.myProfession()}
             </Typography>
           </Box>
+          {/* Contact information */}
           <Box
             display="flex"
             flexDirection="column"
             alignItems="center"
             gap={2}
+            width={{ md: "33%" }}
           >
-            <Typography variant="body2" align="center">
-              {translation.LL.footer.contact()}:
+            <Typography variant="h6" align="center" fontWeight={400}>
+              {translation.LL.footer.contact()}
             </Typography>
             <Box
               display="flex"
@@ -63,14 +73,16 @@ export const Footer = () => {
               <EmailIconButton />
             </Box>
           </Box>
+          {/* Language selection */}
           <Box
             display="flex"
             flexDirection="column"
-            alignItems="center"
+            alignItems={{ xs: "center", md: "flex-end" }}
             gap={1}
+            width={{ md: "33%" }}
           >
-            <Typography variant="body2" align="center">
-              {translation.LL.footer.language()}:
+            <Typography variant="h6" align="center" fontWeight={400}>
+              {translation.LL.footer.language()}
             </Typography>
             <Box>lb</Box>
           </Box>
@@ -87,15 +99,17 @@ export const Footer = () => {
             xs: "center",
             md: "space-between",
           }}
+          paddingBottom={"24px"}
         >
-          <Typography variant="subtitle1" align="center">
+          <Typography variant="subtitle1" textAlign={{ md: "left", xs: "center" }} width={{ md: "50%" }}>
             {translation.LL.footer.builtWith()}
           </Typography>
-          <Typography variant="subtitle1" align="center">
-            © {new Date().getFullYear()} {translation.LL.hero.myName()}. {translation.LL.footer.rightsReserved()}
+          <Typography variant="subtitle1" textAlign={{ md: "right", xs: "center" }} width={{ md: "50%" }}>
+            © {new Date().getFullYear()} {translation.LL.hero.myName()}.{" "}
+            {translation.LL.footer.rightsReserved()}
           </Typography>
         </Box>
       </Box>
-    </Container>
+    </Box>
   );
 };
