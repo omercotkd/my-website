@@ -3,7 +3,7 @@ import { EmailIcon, GitHubIcon, LinkedInIcon } from "../icons";
 import Button from "@mui/material/Button";
 
 const MY_GITHUB_URL = "https://github.com/omercotkd";
-const MY_LINKEDIN_URL = "https://linkedin.com/in/<fill later>";
+const MY_LINKEDIN_URL = "https://www.linkedin.com/in/omer-cohen-9b8758110/";
 const MY_EMAIL_URL = "mailto:omercotkd+mywebsite@gmail.com";
 
 // TODO: add shadow and hover effects to buttons

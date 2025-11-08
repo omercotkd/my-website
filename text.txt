@@ -1,0 +1,7 @@
+I first started coding in high school with C in an electronics course, around 8 years ago, but when you are forced to learn something, it makes it less enjoyable, even when you like it.
+As a result, after finishing high school, I stopped coding for a while, but then the coronavirus lockdown began, and I got bored and decided to refresh my memory and learn C again.
+After a month or two, I was out of small project ideas that were doable for a beginner, and I decided to learn a new language — Python.
+Eventually, a friend of my dad offered me a job, which I gladly accepted (03/2022), so I worked as a full-stack developer at that company for 2 years (until 01/2024), until the company got into financial problems. Luckily for me, one of the customers really liked me, and they offered me a job the moment I got fired,
+so I have been working over there ever since.
+During the time I was working full-time, I volunteered for a few months as a developer at a project that I and other developers started at a non-profit Hackathon.
+I also learned Rust and wrote a REST API for an online shop that never saw the day of light, but it was a good way to practice with a new language.
