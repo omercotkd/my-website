@@ -1,6 +1,6 @@
 export default {
   title: "Databases",
   mongo: {
-    description: "Description about my skills in MongoDB",
+    description: "Advanced knowledge and skills in working with both advanced and basic features.",
   },
 };

@@ -9,16 +9,17 @@ import { ExternalLinkIcon } from "@/components/icons";
 export const ToolsSection = () => {
   const toolsTranslation = useI18nContext().LL.tools;
 
+  // Finding emoji tool: https://emojidb.org/react-emojis
   const tools = [
     {
       name: "FastAPI",
-      emoji: "🐍",
+      emoji: "⚡",
       docUrl: "https://fastapi.tiangolo.com/",
     },
     {
       name: "Flask",
-      emoji: "🍶",
-      docUrl: "https://flask.palletsprojects.com/",
+      emoji: "🧪",
+      docUrl: "https://flask.palletsprojects.com/en/stable/",
     },
     {
       name: "React",
@@ -37,7 +38,7 @@ export const ToolsSection = () => {
     },
     {
       name: "Git",
-      emoji: "🔧",
+      emoji: "🛠️",
       docUrl: "https://git-scm.com/",
     },
     {
@@ -46,13 +47,13 @@ export const ToolsSection = () => {
       docUrl: "https://docs.rs/axum/latest/axum/",
     },
     {
-      name: "Kafka",
-      emoji: "🍞",
+      name: "Apache Kafka",
+      emoji: "💭",
       docUrl: "https://kafka.apache.org/",
     },
     {
       name: "Airflow",
-      emoji: "💨",
+      emoji: "𖣘",
       docUrl: "https://airflow.apache.org/",
     },
     {
@@ -60,6 +61,11 @@ export const ToolsSection = () => {
       emoji: "☁️",
       docUrl: "https://aws.amazon.com/",
     },
+    {
+      name: "GitHub Actions",
+      emoji: "🤖",
+      docUrl: "https://docs.github.com/en/actions",
+    }
   ];
 
   return (

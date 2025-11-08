@@ -7,14 +7,19 @@ import { CodeIcon, RocketIcon, ScanHeartIcon } from "@/components/icons";
 import { useI18nContext } from "@/i18n/i18n-react";
 
 export const ExperienceSection = () => {
-  const experienceTranslations = useI18nContext().LL.experience;
+
+  const translation = useI18nContext();
+
+  const experienceTranslations = translation.LL.experience;
+
+  const langDir = translation.locale === "he" ? "rtl" : "ltr";
 
   const experiences = [
     {
       title: experienceTranslations.jobExperiences.abaHatuv.title(),
       organization: experienceTranslations.jobExperiences.abaHatuv.company(),
       description: experienceTranslations.jobExperiences.abaHatuv.description(),
-      startYear: "2024",
+      startYear: "02/2024",
       endYear: experienceTranslations.present(),
       icon: RocketIcon,
       mainSkills: [
@@ -35,8 +40,8 @@ export const ExperienceSection = () => {
         experienceTranslations.volunteerExperience.carenet.organization(),
       description:
         experienceTranslations.volunteerExperience.carenet.description(),
-      startYear: "2024",
-      endYear: "2024",
+      startYear: "12/2023",
+      endYear: "04/2024",
       icon: ScanHeartIcon,
       mainSkills: [
         "Python",
@@ -56,8 +61,8 @@ export const ExperienceSection = () => {
       organization: experienceTranslations.jobExperiences.saitlabs.company(),
       description: experienceTranslations.jobExperiences.saitlabs.description(),
 
-      startYear: "2022",
-      endYear: "2024",
+      startYear: "03/2022",
+      endYear: "02/2024",
       icon: CodeIcon,
       mainSkills: [
         "Python",
@@ -95,6 +100,7 @@ export const ExperienceSection = () => {
               display="flex"
               flexDirection="column"
               gap={2}
+              dir={langDir}
             >
               <Box
                 display="flex"
@@ -127,6 +133,20 @@ export const ExperienceSection = () => {
                     {exp.organization} &bull; {exp.startYear} - {exp.endYear}
                   </Typography>
                 </Box>
+                {
+                  exp.volunteer && (
+                    <Typography
+                      variant="caption"
+                      color="secondary.main"
+                      border="1px solid"
+                      borderColor="secondary.main"
+                      paddingX={1}
+                      borderRadius={1}
+                    >
+                      {experienceTranslations.volunteerHashtag()}
+                    </Typography>
+                  )
+                }
               </Box>
               <Typography variant="body2" color={"text.muted"}>
                 {exp.description}

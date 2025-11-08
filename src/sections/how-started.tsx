@@ -60,7 +60,7 @@ export const HowStartedSection = () => {
                 variant="body1"
                 className="hover-text-primary"
               >
-                {`${step()}${step()}${step()}${step()}${step()}`}
+                {step()}
               </Typography>
             </Box>
           </GlowPaper>

@@ -20,7 +20,7 @@ type RootTranslation = {
 		 */
 		title: string
 		/**
-		 * S​o​m​e​t​h​i​n​g​ ​s​h​o​r​t​ ​a​b​o​u​t​ ​m​e​ ​t​o​ ​i​n​t​r​o​d​u​c​e​ ​m​y​s​e​l​f​ ​t​o​ ​s​i​t​e​ ​v​i​s​i​t​o​r​s​.
+		 * I​’​m​ ​a​ ​s​e​l​f​-​t​a​u​g​h​t​ ​f​u​l​l​-​s​t​a​c​k​ ​d​e​v​e​l​o​p​e​r​ ​w​i​t​h​ ​a​ ​f​o​c​u​s​ ​o​n​ ​b​a​c​k​e​n​d​ ​s​y​s​t​e​m​s​ ​a​n​d​ ​a​ ​p​a​s​s​i​o​n​ ​f​o​r​ ​p​r​o​b​l​e​m​-​s​o​l​v​i​n​g​.​ ​W​h​e​n​ ​I​’​m​ ​n​o​t​ ​b​u​i​l​d​i​n​g​,​ ​y​o​u​’​l​l​ ​p​r​o​b​a​b​l​y​ ​f​i​n​d​ ​m​e​ ​a​t​ ​t​h​e​ ​g​y​m​,​ ​c​o​o​k​i​n​g​ ​u​p​ ​s​o​m​e​t​h​i​n​g​ ​n​e​w​,​ ​o​r​ ​p​l​a​n​n​i​n​g​ ​m​y​ ​n​e​x​t​ ​t​r​i​p​.
 		 */
 		bio: string
 		hobbies: {
@@ -74,7 +74,7 @@ type RootTranslation = {
 		 */
 		myProfession: string
 		/**
-		 * S​o​m​e​t​h​i​n​g​ ​t​h​a​t​ ​d​e​s​c​r​i​b​e​s​ ​m​y​ ​w​o​r​k​ ​e​t​h​i​c​ ​o​r​ ​p​e​r​s​o​n​a​l​i​t​y​.
+		 * P​r​o​b​l​e​m​ ​s​o​l​v​e​r​ ​t​h​r​o​u​g​h​ ​c​o​d​e
 		 */
 		myPunchline: string
 	}
@@ -85,17 +85,21 @@ type RootTranslation = {
 		title: string
 		steps: {
 			/**
-			 * I​ ​w​r​o​t​e​ ​m​y​ ​f​i​r​s​t​ ​l​i​n​e​ ​o​f​ ​c​o​d​e​ ​i​n​.​.​.
+			 * I​ ​f​i​r​s​t​ ​d​i​s​c​o​v​e​r​e​d​ ​c​o​d​i​n​g​ ​i​n​ ​h​i​g​h​ ​s​c​h​o​o​l​ ​b​y​ ​l​e​a​r​n​i​n​g​ ​C​ ​i​n​ ​a​ ​e​l​e​c​t​r​o​n​i​c​s​ ​c​o​u​r​s​e​,​ ​b​u​t​ ​l​i​f​e​ ​t​o​o​k​ ​m​e​ ​i​n​ ​o​t​h​e​r​ ​d​i​r​e​c​t​i​o​n​s​ ​f​o​r​ ​a​ ​w​h​i​l​e​.
 			 */
 			'0': string
 			/**
-			 * I​ ​b​u​i​l​t​ ​m​y​ ​f​i​r​s​t​ ​p​r​o​j​e​c​t​ ​i​n​.​.​.
+			 * D​u​r​i​n​g​ ​t​h​e​ ​c​o​r​o​n​a​ ​l​o​c​k​d​o​w​n​,​ ​I​ ​g​o​t​ ​b​o​r​e​d​ ​a​n​d​ ​d​e​c​i​d​e​d​ ​t​o​ ​l​e​a​r​n​ ​n​e​w​ ​s​k​i​l​l​s​,​ ​s​o​ ​I​ ​s​t​a​r​t​e​d​ ​c​o​d​i​n​g​ ​a​g​a​i​n​ ​w​i​t​h​ ​C​,​ ​l​e​a​r​n​i​n​g​ ​a​b​o​u​t​ ​n​e​t​w​o​r​k​i​n​g​ ​a​n​d​ ​P​y​t​h​o​n​.
 			 */
 			'1': string
 			/**
-			 * I​ ​g​o​t​ ​m​y​ ​f​i​r​s​t​ ​d​e​v​e​l​o​p​e​r​ ​r​o​l​e​ ​i​n​.​.​.
+			 * A​f​t​e​r​ ​a​ ​w​h​i​l​e​ ​a​ ​f​r​i​e​n​d​ ​o​f​ ​m​y​ ​d​a​d​ ​a​s​k​e​d​ ​m​e​ ​i​f​ ​I​ ​k​n​o​w​ ​h​o​w​ ​t​o​ ​c​o​d​e​,​ ​a​n​d​ ​t​o​l​d​ ​m​e​ ​i​f​ ​I​ ​l​e​a​r​n​ ​R​e​a​c​t​ ​h​e​ ​c​a​n​ ​o​f​f​e​r​ ​m​e​ ​a​ ​j​o​b​.​ ​S​o​ ​I​ ​d​o​v​e​ ​i​n​t​o​ ​R​e​a​c​t​ ​a​n​d​ ​w​e​b​ ​d​e​v​e​l​o​p​m​e​n​t​.
 			 */
 			'2': string
+			/**
+			 * H​e​ ​k​e​p​t​ ​h​i​s​ ​w​o​r​d​ ​a​n​d​ ​o​f​f​e​r​e​d​ ​m​e​ ​a​ ​h​a​l​f​-​t​i​m​e​ ​j​o​b​ ​a​t​ ​S​a​i​t​L​a​b​s​,​ ​a​n​d​ ​a​f​t​e​r​ ​a​ ​m​o​n​t​h​ ​I​ ​w​a​s​ ​h​i​r​e​d​ ​f​u​l​l​-​t​i​m​e​.
+			 */
+			'3': string
 		}
 	}
 	experience: {
@@ -122,7 +126,7 @@ type RootTranslation = {
 				 */
 				company: string
 				/**
-				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
+				 * D​e​s​i​g​n​e​d​ ​a​n​d​ ​m​a​i​n​t​a​i​n​e​d​ ​R​E​S​T​ ​A​P​I​s​,​ ​w​h​i​l​e​ ​b​u​i​l​d​i​n​g​ ​d​a​t​a​b​a​s​e​ ​s​c​h​e​m​a​s​ ​a​n​d​ ​r​e​l​a​t​i​o​n​s​ ​f​r​o​m​ ​s​c​r​a​t​c​h​.​ ​D​e​v​e​l​o​p​e​d​ ​a​ ​P​y​t​h​o​n​-​b​a​s​e​d​ ​W​i​n​d​o​w​s​ ​e​x​e​c​u​t​a​b​l​e​ ​f​o​r​ ​s​y​n​c​h​r​o​n​i​z​i​n​g​ ​m​e​d​i​c​a​l​ ​f​i​l​e​s​ ​a​c​r​o​s​s​ ​i​s​o​l​a​t​e​d​ ​n​e​t​w​o​r​k​s​,​ ​a​n​d​ ​a​s​s​i​s​t​e​d​ ​f​r​o​n​t​e​n​d​ ​d​e​v​e​l​o​p​e​r​s​ ​i​n​ ​c​r​e​a​t​i​n​g​ ​R​e​a​c​t​ ​c​o​m​p​o​n​e​n​t​s​ ​a​n​d​ ​J​a​v​a​S​c​r​i​p​t​ ​f​u​n​c​t​i​o​n​s​.
 				 */
 				description: string
 			}
@@ -136,7 +140,7 @@ type RootTranslation = {
 				 */
 				company: string
 				/**
-				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
+				 * M​a​i​n​t​a​i​n​i​n​g​ ​a​n​d​ ​e​x​p​a​n​d​i​n​g​ ​t​h​e​ ​c​o​m​p​a​n​y​’​s​ ​i​n​-​h​o​u​s​e​ ​b​a​c​k​e​n​d​ ​c​o​a​c​h​i​n​g​ ​p​l​a​t​f​o​r​m​ ​f​o​r​ ​w​e​i​g​h​t​ ​l​o​s​s​,​ ​w​h​i​l​e​ ​d​e​v​e​l​o​p​i​n​g​ ​a​ ​n​e​w​ ​w​e​b​ ​a​p​p​l​i​c​a​t​i​o​n​ ​f​o​r​ ​o​u​r​ ​c​u​s​t​o​m​e​r​s​.​ ​I​m​p​l​e​m​e​n​t​e​d​ ​A​I​ ​c​h​a​t​b​o​t​ ​f​u​n​c​t​i​o​n​a​l​i​t​y​ ​o​n​ ​t​h​e​ ​e​x​i​s​t​i​n​g​ ​c​h​a​t​ ​p​l​a​t​f​o​r​m​,​ ​o​p​t​i​m​i​z​e​d​ ​d​a​t​a​b​a​s​e​ ​p​e​r​f​o​r​m​a​n​c​e​ ​t​h​r​o​u​g​h​ ​i​n​d​e​x​i​n​g​ ​a​n​d​ ​q​u​e​r​y​ ​t​u​n​i​n​g​,​ ​a​n​d​ ​b​u​i​l​t​ ​c​u​s​t​o​m​ ​P​D​F​ ​g​e​n​e​r​a​t​i​o​n​ ​f​e​a​t​u​r​e​s​ ​u​s​i​n​g​ ​P​y​t​h​o​n​ ​a​n​d​ ​H​T​M​L​.
 				 */
 				description: string
 			}
@@ -152,7 +156,7 @@ type RootTranslation = {
 				 */
 				organization: string
 				/**
-				 * S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.​ ​S​o​m​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​h​e​r​e​.
+				 * C​o​n​t​r​i​b​u​t​e​d​ ​t​o​ ​C​a​r​e​n​e​t​,​ ​a​ ​p​l​a​t​f​o​r​m​ ​c​o​n​n​e​c​t​i​n​g​ ​m​e​n​t​a​l​ ​h​e​a​l​t​h​ ​s​u​p​p​o​r​t​ ​t​o​ ​v​i​c​t​i​m​s​ ​o​f​ ​t​h​e​ ​O​c​t​o​b​e​r​ ​7​ ​a​t​t​a​c​k​.​ ​B​u​i​l​t​ ​a​n​d​ ​d​e​p​l​o​y​e​d​ ​t​h​e​ ​b​a​c​k​e​n​d​ ​u​s​i​n​g​ ​F​a​s​t​A​P​I​,​ ​K​o​y​e​b​,​ ​a​n​d​ ​M​o​n​g​o​D​B​,​ ​a​u​t​o​m​a​t​e​d​ ​d​a​t​a​ ​u​p​d​a​t​e​s​ ​w​i​t​h​ ​G​i​t​H​u​b​ ​A​c​t​i​o​n​s​,​ ​a​n​d​ ​e​n​h​a​n​c​e​d​ ​m​u​l​t​i​l​i​n​g​u​a​l​ ​s​e​a​r​c​h​ ​w​i​t​h​ ​v​e​c​t​o​r​i​z​a​t​i​o​n​ ​a​n​d​ ​M​o​n​g​o​D​B​’​s​ ​v​e​c​t​o​r​ ​s​e​a​r​c​h​.
 				 */
 				description: string
 			}
@@ -191,7 +195,7 @@ type RootTranslation = {
 		title: string
 		mongo: {
 			/**
-			 * D​e​s​c​r​i​p​t​i​o​n​ ​a​b​o​u​t​ ​m​y​ ​s​k​i​l​l​s​ ​i​n​ ​M​o​n​g​o​D​B
+			 * A​d​v​a​n​c​e​d​ ​k​n​o​w​l​e​d​g​e​ ​a​n​d​ ​s​k​i​l​l​s​ ​i​n​ ​w​o​r​k​i​n​g​ ​w​i​t​h​ ​b​o​t​h​ ​a​d​v​a​n​c​e​d​ ​a​n​d​ ​b​a​s​i​c​ ​f​e​a​t​u​r​e​s​.
 			 */
 			description: string
 		}
@@ -233,7 +237,7 @@ export type TranslationFunctions = {
 		 */
 		title: () => LocalizedString
 		/**
-		 * Something short about me to introduce myself to site visitors.
+		 * I’m a self-taught full-stack developer with a focus on backend systems and a passion for problem-solving. When I’m not building, you’ll probably find me at the gym, cooking up something new, or planning my next trip.
 		 */
 		bio: () => LocalizedString
 		hobbies: {
@@ -287,7 +291,7 @@ export type TranslationFunctions = {
 		 */
 		myProfession: () => LocalizedString
 		/**
-		 * Something that describes my work ethic or personality.
+		 * Problem solver through code
 		 */
 		myPunchline: () => LocalizedString
 	}
@@ -298,17 +302,21 @@ export type TranslationFunctions = {
 		title: () => LocalizedString
 		steps: {
 			/**
-			 * I wrote my first line of code in...
+			 * I first discovered coding in high school by learning C in a electronics course, but life took me in other directions for a while.
 			 */
 			'0': () => LocalizedString
 			/**
-			 * I built my first project in...
+			 * During the corona lockdown, I got bored and decided to learn new skills, so I started coding again with C, learning about networking and Python.
 			 */
 			'1': () => LocalizedString
 			/**
-			 * I got my first developer role in...
+			 * After a while a friend of my dad asked me if I know how to code, and told me if I learn React he can offer me a job. So I dove into React and web development.
 			 */
 			'2': () => LocalizedString
+			/**
+			 * He kept his word and offered me a half-time job at SaitLabs, and after a month I was hired full-time.
+			 */
+			'3': () => LocalizedString
 		}
 	}
 	experience: {
@@ -335,7 +343,7 @@ export type TranslationFunctions = {
 				 */
 				company: () => LocalizedString
 				/**
-				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
+				 * Designed and maintained REST APIs, while building database schemas and relations from scratch. Developed a Python-based Windows executable for synchronizing medical files across isolated networks, and assisted frontend developers in creating React components and JavaScript functions.
 				 */
 				description: () => LocalizedString
 			}
@@ -349,7 +357,7 @@ export type TranslationFunctions = {
 				 */
 				company: () => LocalizedString
 				/**
-				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
+				 * Maintaining and expanding the company’s in-house backend coaching platform for weight loss, while developing a new web application for our customers. Implemented AI chatbot functionality on the existing chat platform, optimized database performance through indexing and query tuning, and built custom PDF generation features using Python and HTML.
 				 */
 				description: () => LocalizedString
 			}
@@ -365,7 +373,7 @@ export type TranslationFunctions = {
 				 */
 				organization: () => LocalizedString
 				/**
-				 * Some description here. Some description here. Some description here. Some description here. Some description here. Some description here.
+				 * Contributed to Carenet, a platform connecting mental health support to victims of the October 7 attack. Built and deployed the backend using FastAPI, Koyeb, and MongoDB, automated data updates with GitHub Actions, and enhanced multilingual search with vectorization and MongoDB’s vector search.
 				 */
 				description: () => LocalizedString
 			}
@@ -404,7 +412,7 @@ export type TranslationFunctions = {
 		title: () => LocalizedString
 		mongo: {
 			/**
-			 * Description about my skills in MongoDB
+			 * Advanced knowledge and skills in working with both advanced and basic features.
 			 */
 			description: () => LocalizedString
 		}

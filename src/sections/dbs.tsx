@@ -26,6 +26,7 @@ export const DBsSection = () => {
         "Aggregation Framework",
         "Indexing",
         "Performance Optimization",
+        "Atlas Search",
       ],
     },
   ];
