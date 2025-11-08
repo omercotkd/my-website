@@ -124,7 +124,7 @@ export const ToolsSection = () => {
                 <Typography variant="h2" className="hover-rotate">
                   {tool.emoji}
                 </Typography>
-                <Typography variant="h6" className="hover-primary">
+                <Typography variant="h6" className="hover-primary" textAlign={"center"}>
                   {tool.name}
                 </Typography>
                 <Typography
